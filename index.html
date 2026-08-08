@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Tsirakis | Senior Interaction Designer at Netflix</title>
+  <meta name="description" content="Senior Interaction Designer at Netflix with experience at Google, LinkedIn, Apple & eBay. Crafting cross-platform AI experiences that reach millions.">
+  <meta name="author" content="Michael Tsirakis">
+  <meta name="keywords" content="interaction designer, senior designer, Netflix, Google, Apple, LinkedIn, eBay, cross-platform design, UI/UX, AI design, machine learning, artificial intelligence, AI products, AI-powered experiences">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Michael Tsirakis | Senior Interaction Designer at Netflix">
+  <meta property="og:description" content="Crafting cross-platform AI experiences at Netflix. Previously at Google, LinkedIn, Apple & eBay.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@michaeltsirakis">
+  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+  
+  <link rel="canonical" href="https://michaeltsirakis.com">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navigation" id="nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">MT.</a>
+      
+      <div class="nav-links">
+        <a href="#work" class="nav-link" data-section="work">Work</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        <div class="nav-actions">
+          <button class="color-randomizer" id="colorRandomizer" aria-label="Randomize color scheme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="12" height="12" x="2" y="10" rx="2" ry="2"></rect>
+              <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"></path>
+              <path d="M6 18h.01"></path>
+              <path d="M10 14h.01"></path>
+              <path d="M15 6h.01"></path>
+              <path d="M18 9h.01"></path>
+            </svg>
+            <div class="color-tooltip" id="colorTooltip"></div>
+          </button>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="nav-actions-mobile">
+        <button class="color-randomizer" id="colorRandomizerMobile" aria-label="Randomize color scheme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="12" height="12" x="2" y="10" rx="2" ry="2"></rect>
+            <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"></path>
+            <path d="M6 18h.01"></path>
+            <path d="M10 14h.01"></path>
+            <path d="M15 6h.01"></path>
+            <path d="M18 9h.01"></path>
+          </svg>
+          <div class="color-tooltip" id="colorTooltipMobile"></div>
+        </button>
+        <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#work" class="mobile-menu-link">Work</a>
+    <a href="#about" class="mobile-menu-link">About</a>
+    <a href="#experience" class="mobile-menu-link">Experience</a>
+    <a href="#contact" class="mobile-menu-link">Contact</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-gradient"></div>
+      <div class="container hero-content">
+        <p class="hero-intro animate-fade-up">Design Leader · AI & Product</p>
+        <h1 class="hero-title animate-fade-up" style="animation-delay: 0.2s">
+          <span>Michael</span>
+          <span class="text-gradient">Tsirakis</span>
+        </h1>
+        <p class="hero-description animate-fade-up" style="animation-delay: 0.4s">
+          I'm a designer who loves making AI feel human. Currently at <span class="text-highlight">Netflix</span>, previously at Google, LinkedIn, Apple & eBay.
+        </p>
+        <div class="hero-actions animate-fade-up" style="animation-delay: 0.6s">
+          <a href="#work" class="btn btn-gold">
+            Explore Work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
+          <div class="hero-location">
+            <span class="location-dot"></span>
+            <span>Toronto → Las Vegas</span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator animate-fade-in" style="animation-delay: 1s">
+        <div class="scroll-mouse">
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work Section -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Selected Work</p>
+          <h2 class="section-title">Projects Where I've Made Impact</h2>
+        </div>
+        
+        <div class="work-grid">
+          <!-- Google -->
+          <a href="case-study.html?project=mandala" class="work-card">
+            <div class="work-card-image">
+              <img src="images/mandala2.gif" alt="Google - Project Mandala">
+              <div class="work-card-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="work-card-content">
+              <div class="work-card-meta-row">
+                <span class="work-card-company">Google</span>
+                <span class="work-card-dot"></span>
+                <span class="work-card-period">2021 – 2025</span>
+              </div>
+              <h3 class="work-card-title">Project Mandala</h3>
+              <p class="work-card-summary">Led 0-1 AI vision securing SVP buy-in. 60% faster campaigns, 45% productivity gains.</p>
+              <p class="work-card-metric"><span class="metric-value">SVP+</span> <span class="metric-label">stakeholder buy-in</span></p>
+            </div>
+          </a>
+          
+          <!-- LinkedIn -->
+          <a href="case-study.html?project=smb-hiring" class="work-card">
+            <div class="work-card-image">
+              <video src="images/linkedin-future.mp4" autoplay loop muted playsinline></video>
+              <div class="work-card-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="work-card-content">
+              <div class="work-card-meta-row">
+                <span class="work-card-company">LinkedIn</span>
+                <span class="work-card-dot"></span>
+                <span class="work-card-period">2019 – 2021</span>
+              </div>
+              <h3 class="work-card-title">SMB Hiring Experience</h3>
+              <p class="work-card-summary">Redesigned SMB hiring for busy owners. 60% more hires, 185% more responses.</p>
+              <p class="work-card-metric"><span class="metric-value">+60%</span> <span class="metric-label">successful hires</span></p>
+            </div>
+          </a>
+          
+          <!-- Apple -->
+          <a href="case-study.html?project=training-platform" class="work-card">
+            <div class="work-card-image">
+              <img src="images/atlas-demo.gif" alt="Apple - Training Platform">
+              <div class="work-card-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="work-card-content">
+              <div class="work-card-meta-row">
+                <span class="work-card-company">Apple</span>
+                <span class="work-card-dot"></span>
+                <span class="work-card-period">2018 – 2019</span>
+              </div>
+              <h3 class="work-card-title">Global Training Platform</h3>
+              <p class="work-card-summary">Rebuilt training platform for 500K+ users. 73% more completions, 4.6★ rating.</p>
+              <p class="work-card-metric"><span class="metric-value">500K+</span> <span class="metric-label">global users</span></p>
+            </div>
+          </a>
+          
+          <!-- eBay -->
+          <a href="case-study.html?project=returns-experience" class="work-card">
+            <div class="work-card-image">
+              <img src="images/ebay-5-dollar-return.gif" alt="eBay - Returns Experience">
+              <div class="work-card-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="work-card-content">
+              <div class="work-card-meta-row">
+                <span class="work-card-company">eBay</span>
+                <span class="work-card-dot"></span>
+                <span class="work-card-period">2017 – 2018</span>
+              </div>
+              <h3 class="work-card-title">Returns Experience</h3>
+              <p class="work-card-summary">Transformed the returns experience. 64% faster, $2.3M saved annually.</p>
+              <p class="work-card-metric"><span class="metric-value">+64%</span> <span class="metric-label">completion rate</span></p>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Impact CTA -->
+        <div class="impact-cta">
+          <a href="impact.html" class="impact-cta-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+              <polyline points="16 7 22 7 22 13"></polyline>
+            </svg>
+            <span>See the numbers behind the work</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-about">
+      <div class="about-gradient"></div>
+      <div class="container">
+        <!-- Title -->
+        <div class="about-header">
+          <p class="section-label">About Me</p>
+          <h2 class="section-title">
+            The human behind <span class="text-gradient">the screens</span>
+          </h2>
+        </div>
+        
+        <!-- Two-column layout: image left, content right -->
+        <div class="about-grid">
+          <!-- Image section - left column -->
+          <div class="about-image-wrapper">
+            <div class="about-image" id="photoEasterEgg">
+              <img src="images/profile-photo.jpg" alt="Michael Tsirakis" class="profile-photo" id="profilePhoto">
+              <img src="images/baby-photo.jpg" alt="Baby Michael - Easter egg!" class="baby-photo" id="babyPhoto">
+              <div class="about-image-overlay"></div>
+              <div class="about-image-frame"></div>
+              <div class="about-location-card glass" id="locationCard">
+                <div class="about-location-text">
+                  <p class="about-location-city" id="locationCity">Las Vegas, NV</p>
+                  <p class="about-location-origin" id="locationOrigin">Originally from Toronto</p>
+                </div>
+                <svg class="sparkle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                  <path d="M20 3v4"/>
+                  <path d="M22 5h-4"/>
+                  <path d="M4 17v2"/>
+                  <path d="M5 18H3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Content section - right column -->
+          <div class="about-content">
+            <div class="about-text">
+              <p>Hey! I'm a Senior Interaction Designer at Netflix, where I get to work on AI experiences that reach millions of people.</p>
+              <p>Before Netflix, I spent time at Google, LinkedIn, Apple, and eBay. Along the way, I've learned that the best design happens when you really listen to people and keep things simple. I'm passionate about creating intuitive, accessible interfaces that make complex technology feel effortless.</p>
+              <p>I thrive in ambiguous problem spaces where research and prototyping can uncover unexpected solutions. Whether it's reimagining recruiter workflows or building AI-powered creative tools, I love turning complicated challenges into elegant experiences.</p>
+              <p>When I'm not designing, you'll probably find me on the basketball court, exploring a new city, or on the hunt for the perfect iced coffee.</p>
+            </div>
+            
+            <a href="michael-tsirakis-resume-2025.pdf" download="Michael-Tsirakis-Resume-2025.pdf" class="btn btn-primary about-resume-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              Download Resume
+            </a>
+            
+            <div class="passions-grid">
+              <div class="passion-card" onclick="openCoffeeGame()">
+                <svg class="passion-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+                <h4 class="passion-title">Iced Coffee Enthusiast</h4>
+                <div class="passion-text-wrapper">
+                  <p class="passion-desc">Fueled by cold brew, always</p>
+                  <span class="passion-hint">☕ Click to play!</span>
+                </div>
+              </div>
+              <div class="passion-card" onclick="openBasketballGame()">
+                <svg class="passion-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+                <h4 class="passion-title">Basketball Lover</h4>
+                <div class="passion-text-wrapper">
+                  <p class="passion-desc">Hoops keep me grounded</p>
+                  <span class="passion-hint">🏀 Click to play!</span>
+                </div>
+              </div>
+              <div class="passion-card" onclick="openTravelGame()">
+                <svg class="passion-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+                </svg>
+                <h4 class="passion-title">World Traveler</h4>
+                <div class="passion-text-wrapper">
+                  <p class="passion-desc">30+ countries and counting</p>
+                  <span class="passion-hint">✈️ Click to play!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-experience">
+      <!-- Marquee Banner -->
+      <div class="marquee-banner">
+        <div class="marquee-track">
+          <div class="marquee-content">
+            <span>AI Design</span>
+            <span>Machine Learning UX</span>
+            <span>Conversational Design</span>
+            <span>User Experience</span>
+            <span>Visual Design</span>
+            <span>Product Design</span>
+            <span>Prototyping</span>
+            <span>Interaction Design</span>
+            <span>User Flows</span>
+            <span>Product Strategy</span>
+            <span>Usability Testing</span>
+            <span>Design Systems</span>
+            <span>Journey Mapping</span>
+            <span>Responsive Design</span>
+            <span>Cross-Platform Design</span>
+            <span>Presentations</span>
+            <span>Heuristic Analysis</span>
+            <span>Adaptability</span>
+            <span>Collaboration</span>
+            <span>Figma</span>
+            <span>Adobe Suite</span>
+          </div>
+          <div class="marquee-content">
+            <span>AI Design</span>
+            <span>Machine Learning UX</span>
+            <span>Conversational Design</span>
+            <span>User Experience</span>
+            <span>Visual Design</span>
+            <span>Product Design</span>
+            <span>Prototyping</span>
+            <span>Interaction Design</span>
+            <span>User Flows</span>
+            <span>Product Strategy</span>
+            <span>Usability Testing</span>
+            <span>Design Systems</span>
+            <span>Journey Mapping</span>
+            <span>Responsive Design</span>
+            <span>Cross-Platform Design</span>
+            <span>Presentations</span>
+            <span>Heuristic Analysis</span>
+            <span>Adaptability</span>
+            <span>Collaboration</span>
+            <span>Figma</span>
+            <span>Adobe Suite</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container experience-container">
+        <div class="section-header">
+          <p class="section-label">Where I've Been</p>
+          <h2 class="section-title">My Journey</h2>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item current">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">Netflix</h3>
+                  <p class="timeline-role">Senior Interaction Designer</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="current-badge">Current</span>
+                  <span class="timeline-period">2025 — Present</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">Google</h3>
+                  <p class="timeline-role">Senior Interaction Designer</p>
+                </div>
+                <span class="timeline-period">2021 — 2025</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">LinkedIn</h3>
+                  <p class="timeline-role">Product Designer</p>
+                </div>
+                <span class="timeline-period">2019 — 2021</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">Apple</h3>
+                  <p class="timeline-role">UX Designer</p>
+                </div>
+                <span class="timeline-period">2018 — 2019</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-company">eBay</h3>
+                  <p class="timeline-role">UX Designer</p>
+                </div>
+                <span class="timeline-period">2017 — 2018</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Community Section -->
+    <section id="leadership" class="section section-leadership">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Giving Back</p>
+          <h2 class="section-title">Beyond Work</h2>
+        </div>
+        
+        <div class="leadership-grid">
+          <!-- Speaking -->
+          <div class="leadership-card glass">
+            <div class="leadership-header">
+              <div class="leadership-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" x2="12" y1="19" y2="22"></line>
+                </svg>
+              </div>
+              <div>
+                <h3>Speaking</h3>
+                <p class="leadership-subtitle">Guest Presentations</p>
+              </div>
+            </div>
+            <div class="speaking-list">
+              <div class="speaking-item">
+                <div class="speaking-school">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                  <span>SCAD</span>
+                </div>
+                <span class="speaking-topic">AI & Design</span>
+              </div>
+              <div class="speaking-item">
+                <div class="speaking-school">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                  <span>UC Berkeley</span>
+                </div>
+                <span class="speaking-topic">Design Portfolios</span>
+              </div>
+              <div class="speaking-item">
+                <div class="speaking-school">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                  <span>Sheridan College</span>
+                </div>
+                <span class="speaking-topic">Design Portfolios</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Judging -->
+          <div class="leadership-card glass">
+            <div class="leadership-header">
+              <div class="leadership-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="6"></circle>
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Judging</h3>
+                <p class="leadership-subtitle">Design Competitions</p>
+              </div>
+            </div>
+            <div class="judging-card">
+              <p class="judging-title">SCAD StartUp '26</p>
+              <p class="judging-description">Semi-Finals Judge for SCAD's annual design entrepreneurship competition.</p>
+              <span class="upcoming-badge">Upcoming</span>
+            </div>
+          </div>
+
+          <!-- Mentorship -->
+          <div class="leadership-card glass">
+            <div class="leadership-header">
+              <div class="leadership-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Mentorship</h3>
+                <p class="leadership-subtitle">Portfolio Reviews</p>
+              </div>
+            </div>
+            <div class="testimonial-cards">
+              <div class="testimonial-card">
+                <p class="testimonial-quote">"Michael helped me completely rethink my case study structure. My projects finally tell a compelling story instead of just listing features."</p>
+                <p class="testimonial-author">— SCAD Student</p>
+              </div>
+              <div class="testimonial-card">
+                <p class="testimonial-quote">"He pushed me to inject more of my personality into my portfolio. It finally feels like me, not just another generic design site."</p>
+                <p class="testimonial-author">— SCAD Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section section-testimonials">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Kind Words</p>
+          <h2 class="section-title">What People Say</h2>
+        </div>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card-large glass">
+            <svg class="testimonial-quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
+              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+            </svg>
+            <p class="testimonial-text">"Michael brought super useful and great insights to the table. He always demonstrated solid experience in the tools and system we used, and was always open-minded, receptive to feedback and extremely easy to work with."</p>
+            <div class="testimonial-author-info">
+              <p class="testimonial-author-name">Rayana</p>
+              <p class="testimonial-author-role">Senior Software Engineer, Google</p>
+            </div>
+          </div>
+          
+          <div class="testimonial-card-large glass">
+            <svg class="testimonial-quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
+              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+            </svg>
+            <p class="testimonial-text">"Michael is an MVP teammate that any company is lucky to have. He has the amazing ability to grasp complicated systems in a very short time. Michael can also quickly create a lot of content and is very thoughtful and generous with his feedback."</p>
+            <div class="testimonial-author-info">
+              <p class="testimonial-author-name">Steven</p>
+              <p class="testimonial-author-role">Product Designer, LinkedIn</p>
+            </div>
+          </div>
+          
+          <div class="testimonial-card-large glass">
+            <svg class="testimonial-quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
+              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+            </svg>
+            <p class="testimonial-text">"Thanks for your outstanding work the last couple months helping craft our MarkEng vision. Your ability to transform our strategy document into a compelling story is superb! Your future looking mocks will be used by a VP of marketing to pitch our value."</p>
+            <div class="testimonial-author-info">
+              <p class="testimonial-author-name">Alex</p>
+              <p class="testimonial-author-role">Group Product Manager, Google</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="contact-gradient"></div>
+      <div class="container">
+        <div class="contact-content">
+          <p class="section-label">Let's Connect</p>
+          <h2 class="contact-title">
+            Say hi, I'd
+            <br>
+            <span class="text-gradient">love to chat</span>
+          </h2>
+          <p class="contact-description">
+            Whether you want to talk design, collaborate on something cool, 
+            or have me speak at your school — drop me a line! 
+            I'm always happy to connect.
+          </p>
+          <a href="mailto:mtsirakis@gmail.com" class="btn btn-gold btn-large">
+            Say Hello
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+          <div class="social-links">
+            <a href="mailto:mtsirakis@gmail.com" class="social-link" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mtsirakis" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Michael Tsirakis</p>
+      <p>Fueled by iced coffee ☕ <span class="text-primary">·</span> Shipped from Las Vegas</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Mini Game Modals -->
+  <!-- Coffee Catch Game -->
+  <div class="game-modal" id="coffeeGameModal">
+    <div class="game-modal-backdrop" onclick="closeCoffeeGame()"></div>
+    <div class="game-modal-content">
+      <div class="game-header">
+        <div class="game-title">
+          <span>☕</span>
+          <h3>Iced Coffee Catch!</h3>
+        </div>
+        <div class="game-header-actions">
+          <button class="mute-btn" onclick="toggleGameMute()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 5-6 4H2v6h3l6 4V5zM15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+          <button class="close-btn" onclick="closeCoffeeGame()">✕</button>
+        </div>
+      </div>
+      <div class="game-stats">
+        <span>Score: <strong id="coffeeScore">0</strong></span>
+        <span>Combo: <strong id="coffeeCombo">0</strong></span>
+        <span>Lives: <span id="coffeeLives">☕☕☕</span></span>
+      </div>
+      <div class="game-stats-row">
+        <span>Best: <span id="coffeeHighScore">0</span></span>
+      </div>
+      <div class="game-area coffee-game-area" id="coffeeGameArea">
+        <div class="hit-flash-overlay" id="coffeeHitFlash"></div>
+        <div class="coffee-cup" id="coffeeCup">🥤</div>
+        <div class="game-over-overlay" id="coffeeGameOver">
+          <p class="game-over-title">Game Over!</p>
+          <p>You caught <strong id="coffeeFinalScore">0</strong> iced coffees!</p>
+          <button class="game-btn" onclick="resetCoffeeGame(); startCoffeeGame();">Play Again</button>
+        </div>
+      </div>
+      <div class="mobile-slider-control" id="coffeeMobileSlider">
+        <div class="slider-track"></div>
+        <div class="slider-thumb" id="coffeeSliderThumb">🥤</div>
+      </div>
+      <p class="mobile-slider-hint" id="coffeeMobileHint">Slide to move cup ↔️</p>
+      <p class="game-hint">Catch 🧊☕ iced coffee • Avoid 🔥☕ hot coffee</p>
+    </div>
+  </div>
+
+  <!-- Basketball Game -->
+  <div class="game-modal" id="basketballGameModal">
+    <div class="game-modal-backdrop" onclick="closeBasketballGame()"></div>
+    <div class="game-modal-content">
+      <div class="game-header">
+        <div class="game-title">
+          <span>🏀</span>
+          <h3>Shoot Hoops!</h3>
+        </div>
+        <div class="game-header-actions">
+          <button class="mute-btn" onclick="toggleGameMute()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 5-6 4H2v6h3l6 4V5zM15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+          <button class="close-btn" onclick="closeBasketballGame()">✕</button>
+        </div>
+      </div>
+      <div class="game-mode-toggles">
+        <button class="mode-toggle-btn" id="movingHoopBtn" onclick="toggleMovingHoop()">🎯 Moving Hoop</button>
+        <button class="mode-toggle-btn" id="timerModeBtn" onclick="toggleTimerMode()">⏱️ Timer Mode</button>
+      </div>
+      <div class="game-stats">
+        <span>Score: <strong id="basketballScore">0</strong></span>
+        <span>Streak: <strong id="basketballStreak">🔥 0</strong></span>
+        <span>Best: <span id="basketballBest">0</span></span>
+      </div>
+      <div class="game-area basketball-game-area">
+        <div class="basketball-hoop" id="basketballHoop">
+          <div class="backboard"></div>
+          <div class="rim"></div>
+          <div class="net"></div>
+        </div>
+        <div class="game-result" id="basketballResult"></div>
+        <div class="basketball" id="basketballBall"></div>
+        <div class="court-floor"></div>
+        <div class="game-over-overlay" id="basketballTimerEnd">
+          <p class="game-over-title">Time's Up!</p>
+          <p>Final Score: <strong id="basketballFinalScore">0</strong></p>
+          <button class="game-btn" onclick="resetBasketballGame()">Play Again</button>
+        </div>
+      </div>
+      <div class="game-controls">
+        <div class="control-row">
+          <span class="control-label">Power</span>
+          <input type="range" id="powerSlider" min="20" max="80" value="50">
+          <span class="control-value" id="powerValue">50%</span>
+        </div>
+        <div class="control-row">
+          <span class="control-label">Angle</span>
+          <input type="range" id="angleSlider" min="30" max="65" value="45">
+          <span class="control-value" id="angleValue">45°</span>
+        </div>
+      </div>
+      <div class="game-actions">
+        <button class="game-btn primary" onclick="shootBasketball()">Shoot! 🏀</button>
+        <button class="game-btn" onclick="resetBasketballGame()">Reset</button>
+      </div>
+      <p class="game-hint">Sweet spot: ~55% power, ~47° angle (green = in range)</p>
+    </div>
+  </div>
+
+  <!-- Travel Memory Game -->
+  <div class="game-modal" id="travelGameModal">
+    <div class="game-modal-backdrop" onclick="closeTravelGame()"></div>
+    <div class="game-modal-content">
+      <div class="game-header">
+        <div class="game-title">
+          <span>✈️</span>
+          <h3>Travel Memory</h3>
+        </div>
+        <div class="game-header-actions">
+          <button class="mute-btn" onclick="toggleGameMute()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 5-6 4H2v6h3l6 4V5zM15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+          <button class="close-btn" onclick="closeTravelGame()">✕</button>
+        </div>
+      </div>
+      <div class="game-stats">
+        <span>Moves: <strong id="travelMoves">0</strong></span>
+        <span>Matches: <strong id="travelMatches">0/8</strong></span>
+        <span>Best: <span id="travelBest">—</span></span>
+      </div>
+      <div class="memory-grid" id="travelGrid"></div>
+      <div class="travel-win" id="travelWin">
+        <p class="game-over-title">🎉 World Traveler!</p>
+        <p>Completed in <strong id="travelFinalMoves">0</strong> moves!</p>
+      </div>
+      <button class="game-btn" onclick="initTravelGame(); hideTravelWin();" style="width: 100%; margin-top: 1rem;">
+        <span>↺</span> Restart
+      </button>
+      <p class="game-hint">Match all the destinations I've visited!</p>
+    </div>
+  </div>
+
+
+  <!-- Work Modal / Bottom Sheet -->
+  <div class="work-modal" id="workModal">
+    <div class="work-modal-backdrop" onclick="closeWorkModal()"></div>
+    <div class="work-modal-content" id="workModalContent">
+      <!-- Header -->
+      <div class="work-modal-header">
+        <div class="work-modal-handle"></div>
+        <div class="work-modal-header-content">
+          <div class="work-modal-title-row">
+            <h3 class="work-modal-company" id="modalCompany">Google</h3>
+            <span class="work-modal-nda" id="modalNda" style="display: none;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              NDA
+            </span>
+          </div>
+          <button class="work-modal-close" onclick="closeWorkModal()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Scrollable Content -->
+      <div class="work-modal-scroll">
+        <!-- Project Tabs -->
+        <div class="work-modal-tabs" id="modalTabs"></div>
+        
+        <!-- Two Column Layout on Desktop -->
+        <div class="work-modal-two-column">
+          <!-- Left: Image Carousel -->
+          <div class="work-modal-carousel-column">
+            <div class="work-modal-carousel" id="modalCarousel">
+              <div class="work-modal-images" id="modalImages"></div>
+              <div class="work-modal-dots" id="modalDots"></div>
+            </div>
+          </div>
+          
+          <!-- Right: Details -->
+          <div class="work-modal-details-column">
+            <div class="work-modal-details">
+              <!-- Title & Meta Header -->
+              <div class="work-modal-header-section">
+                <h4 class="work-modal-project-title" id="modalProjectTitle"></h4>
+                <div class="work-modal-meta-tags" id="modalMetaTags"></div>
+                <p class="work-modal-project-desc" id="modalProjectDesc"></p>
+              </div>
+              
+              <!-- Key Metrics - Hero style -->
+              <div class="work-modal-metrics-grid" id="modalMetrics"></div>
+              
+              <!-- Challenge & Approach -->
+              <div class="work-modal-challenge-approach" id="modalChallengeApproach"></div>
+              
+              <!-- What I Did - Enhanced list -->
+              <div class="work-modal-contributions" id="modalContributions"></div>
+              
+              <!-- The Result - Premium highlight -->
+              <div class="work-modal-result" id="modalResult"></div>
+              
+              <!-- Skills - Tag cloud -->
+              <div class="work-modal-skills-section">
+                <h5 class="work-modal-skills-label">Skills & Methods</h5>
+                <div class="work-modal-skills" id="modalSkills"></div>
+              </div>
+              
+              <!-- NDA Notice -->
+              <div class="work-modal-nda-notice" id="modalNdaNotice" style="display: none;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>Details generalized under NDA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer CTA -->
+      <div class="work-modal-footer">
+        <a href="#contact" class="btn btn-primary work-modal-cta" onclick="closeWorkModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          Reach Out for More Info
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="work-lightbox" id="workLightbox" onclick="handleLightboxBackdropClick(event)">
+    <button class="work-lightbox-close" onclick="closeLightbox()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="work-lightbox-counter" id="lightboxCounter">1 / 3</div>
+    <div class="work-lightbox-image-container" id="lightboxImageContainer">
+      <img class="work-lightbox-image" id="lightboxImage" src="" alt="" ondblclick="handleLightboxDoubleTap()">
+      <video class="work-lightbox-image" id="lightboxVideo" src="" autoplay loop muted playsinline ondblclick="handleLightboxDoubleTap()" style="display: none;"></video>
+    </div>
+    <p class="work-lightbox-hint" id="lightboxHint">Pinch to zoom • Swipe to navigate</p>
+    <button class="work-lightbox-nav work-lightbox-prev" onclick="prevLightboxImage()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="work-lightbox-nav work-lightbox-next" onclick="nextLightboxImage()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+  <script src="minigames.js"></script>
+</body>
+</html>
