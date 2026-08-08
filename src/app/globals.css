@@ -1,6 +1,15 @@
 /* =========================================================
-   Neha Jangid — landing page
-   Original stylesheet. Dark-first, light theme via [data-theme="light"].
+   Neha Jangid — global stylesheet
+   Dark-first, light theme via [data-theme="light"].
+
+   This is the site's single source of visual truth and is intentionally kept
+   as plain global CSS rather than being split into CSS Modules: every class
+   below is already namespaced by hand, the accent tokens are repainted at
+   runtime from JavaScript (see src/lib/appearance.ts), and keeping one file
+   guarantees the React port renders pixel-for-pixel like the original markup.
+
+   The only edit made during the Next.js migration is the three --font-*
+   tokens, which now point at the self-hosted next/font families.
    ========================================================= */
 
 /* ---------- Tokens ---------- */
@@ -25,9 +34,9 @@
   --shadow:        0 24px 60px -28px rgba(0, 0, 0, .85);
   --shadow-lift:   0 32px 70px -30px rgba(0, 0, 0, .9);
 
-  --font-display: 'Syne', system-ui, sans-serif;
-  --font-body:    'Inter', system-ui, sans-serif;
-  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+  --font-display: var(--font-syne), system-ui, sans-serif;
+  --font-body:    var(--font-inter), system-ui, sans-serif;
+  --font-mono:    var(--font-jetbrains-mono), ui-monospace, monospace;
 
   --r-sm: 10px;
   --r:    16px;
