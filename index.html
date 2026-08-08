@@ -1,999 +1,841 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michael Tsirakis | Senior Interaction Designer at Netflix</title>
-  <meta name="description" content="Senior Interaction Designer at Netflix with experience at Google, LinkedIn, Apple & eBay. Crafting cross-platform AI experiences that reach millions.">
-  <meta name="author" content="Michael Tsirakis">
-  <meta name="keywords" content="interaction designer, senior designer, Netflix, Google, Apple, LinkedIn, eBay, cross-platform design, UI/UX, AI design, machine learning, artificial intelligence, AI products, AI-powered experiences">
-  
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Michael Tsirakis | Senior Interaction Designer at Netflix">
-  <meta property="og:description" content="Crafting cross-platform AI experiences at Netflix. Previously at Google, LinkedIn, Apple & eBay.">
+  <title>Neha Jangid | SaaS SEO &amp; Organic Growth</title>
+  <meta name="description" content="I help SaaS companies increase visibility, traffic, and signups. 5+ years of SEO and content experience across 30+ SaaS products. Co-founder of DevMark Lab.">
+  <meta name="author" content="Neha Jangid">
+
+  <meta property="og:title" content="Neha Jangid | SaaS SEO &amp; Organic Growth">
+  <meta property="og:description" content="Organic growth for SaaS — search, AI visibility, content, video, digital PR and communities, tied to signups and revenue.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
-  
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@michaeltsirakis">
-  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
-  
-  <link rel="canonical" href="https://michaeltsirakis.com">
-  
-  <!-- Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="neha.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navigation" id="nav">
-    <div class="container nav-container">
-      <a href="index.html" class="nav-logo">MT.</a>
-      
-      <div class="nav-links">
-        <a href="#work" class="nav-link" data-section="work">Work</a>
-        <a href="#about" class="nav-link" data-section="about">About</a>
-        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
-        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-        <div class="nav-actions">
-          <button class="color-randomizer" id="colorRandomizer" aria-label="Randomize color scheme">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="12" height="12" x="2" y="10" rx="2" ry="2"></rect>
-              <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"></path>
-              <path d="M6 18h.01"></path>
-              <path d="M10 14h.01"></path>
-              <path d="M15 6h.01"></path>
-              <path d="M18 9h.01"></path>
-            </svg>
-            <div class="color-tooltip" id="colorTooltip"></div>
-          </button>
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          </button>
-        </div>
-      </div>
-      
-      <div class="nav-actions-mobile">
-        <button class="color-randomizer" id="colorRandomizerMobile" aria-label="Randomize color scheme">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="12" height="12" x="2" y="10" rx="2" ry="2"></rect>
-            <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"></path>
-            <path d="M6 18h.01"></path>
-            <path d="M10 14h.01"></path>
-            <path d="M15 6h.01"></path>
-            <path d="M18 9h.01"></path>
-          </svg>
-          <div class="color-tooltip" id="colorTooltipMobile"></div>
-        </button>
-        <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
-          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">NJ<span class="brand-dot">.</span></a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#process" class="nav-link">How We Work</a>
+      <a href="#work" class="nav-link">Case Studies</a>
+      <a href="#voices" class="nav-link">Testimonials</a>
+      <a href="#faq" class="nav-link">FAQs</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="https://cal.com/neha-jangid-fucuhx" target="_blank" rel="noopener" class="btn btn-sm btn-accent nav-cta">Book a Call</a>
+
+      <div class="shuffle-wrap">
+        <button class="icon-btn" id="colorBtn" aria-label="Shuffle accent colour">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a9 9 0 1 0 0 18c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.4-1a1.5 1.5 0 0 1 1.07-2.56H16a5 5 0 0 0 5-5c0-4.42-4.03-8-9-8z"></path>
+            <circle cx="7.5" cy="11.5" r="1"></circle>
+            <circle cx="10.5" cy="7.5" r="1"></circle>
+            <circle cx="15" cy="9" r="1"></circle>
           </svg>
         </button>
+        <div class="shuffle-tip" id="colorTip" role="status" aria-live="polite"></div>
       </div>
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-        <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
+
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle colour theme">
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4.5"></circle>
+          <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path>
         </svg>
-        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
         </svg>
       </button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </div>
-  </nav>
-  
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#work" class="mobile-menu-link">Work</a>
-    <a href="#about" class="mobile-menu-link">About</a>
-    <a href="#experience" class="mobile-menu-link">Experience</a>
-    <a href="#contact" class="mobile-menu-link">Contact</a>
   </div>
+</nav>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-gradient"></div>
-      <div class="container hero-content">
-        <p class="hero-intro animate-fade-up">Design Leader · AI & Product</p>
-        <h1 class="hero-title animate-fade-up" style="animation-delay: 0.2s">
-          <span>Michael</span>
-          <span class="text-gradient">Tsirakis</span>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services">Services</a>
+  <a href="#process">How We Work</a>
+  <a href="#work">Case Studies</a>
+  <a href="#voices">Testimonials</a>
+  <a href="#faq">FAQs</a>
+  <a href="https://cal.com/neha-jangid-fucuhx" target="_blank" rel="noopener" class="mm-cta">Book a Free Call →</a>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 class="hero-title reveal">
+          I’m <span class="grad">Neha Jangid</span>.<br>
+          I help SaaS companies increase visibility, traffic, and signups
         </h1>
-        <p class="hero-description animate-fade-up" style="animation-delay: 0.4s">
-          I'm a designer who loves making AI feel human. Currently at <span class="text-highlight">Netflix</span>, previously at Google, LinkedIn, Apple & eBay.
+        <p class="hero-lede reveal" style="--d:.12s">
+          <b class="lede-num">5+ years</b> of SEO and content experience across
+          <b class="lede-num">30+ SaaS products</b>. I get your product and know the
+          strategies that move the needle for sustainable organic growth.
         </p>
-        <div class="hero-actions animate-fade-up" style="animation-delay: 0.6s">
-          <a href="#work" class="btn btn-gold">
-            Explore Work
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <polyline points="19 12 12 19 5 12"></polyline>
-            </svg>
-          </a>
-          <div class="hero-location">
-            <span class="location-dot"></span>
-            <span>Toronto → Las Vegas</span>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-indicator animate-fade-in" style="animation-delay: 1s">
-        <div class="scroll-mouse">
-          <div class="scroll-dot"></div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Selected Work Section -->
-    <section id="work" class="section">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">Selected Work</p>
-          <h2 class="section-title">Projects Where I've Made Impact</h2>
-        </div>
-        
-        <div class="work-grid">
-          <!-- Google -->
-          <a href="case-study.html?project=mandala" class="work-card">
-            <div class="work-card-image">
-              <img src="images/mandala2.gif" alt="Google - Project Mandala">
-              <div class="work-card-arrow">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </div>
-            </div>
-            <div class="work-card-content">
-              <div class="work-card-meta-row">
-                <span class="work-card-company">Google</span>
-                <span class="work-card-dot"></span>
-                <span class="work-card-period">2021 – 2025</span>
-              </div>
-              <h3 class="work-card-title">Project Mandala</h3>
-              <p class="work-card-summary">Led 0-1 AI vision securing SVP buy-in. 60% faster campaigns, 45% productivity gains.</p>
-              <p class="work-card-metric"><span class="metric-value">SVP+</span> <span class="metric-label">stakeholder buy-in</span></p>
-            </div>
+        <div class="hero-actions reveal" style="--d:.18s">
+          <a href="https://cal.com/neha-jangid-fucuhx" target="_blank" rel="noopener" class="btn btn-accent btn-lg">
+            Book a Free 30-Minute Call
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
-          
-          <!-- LinkedIn -->
-          <a href="case-study.html?project=smb-hiring" class="work-card">
-            <div class="work-card-image">
-              <video src="images/linkedin-future.mp4" autoplay loop muted playsinline></video>
-              <div class="work-card-arrow">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </div>
-            </div>
-            <div class="work-card-content">
-              <div class="work-card-meta-row">
-                <span class="work-card-company">LinkedIn</span>
-                <span class="work-card-dot"></span>
-                <span class="work-card-period">2019 – 2021</span>
-              </div>
-              <h3 class="work-card-title">SMB Hiring Experience</h3>
-              <p class="work-card-summary">Redesigned SMB hiring for busy owners. 60% more hires, 185% more responses.</p>
-              <p class="work-card-metric"><span class="metric-value">+60%</span> <span class="metric-label">successful hires</span></p>
-            </div>
-          </a>
-          
-          <!-- Apple -->
-          <a href="case-study.html?project=training-platform" class="work-card">
-            <div class="work-card-image">
-              <img src="images/atlas-demo.gif" alt="Apple - Training Platform">
-              <div class="work-card-arrow">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </div>
-            </div>
-            <div class="work-card-content">
-              <div class="work-card-meta-row">
-                <span class="work-card-company">Apple</span>
-                <span class="work-card-dot"></span>
-                <span class="work-card-period">2018 – 2019</span>
-              </div>
-              <h3 class="work-card-title">Global Training Platform</h3>
-              <p class="work-card-summary">Rebuilt training platform for 500K+ users. 73% more completions, 4.6★ rating.</p>
-              <p class="work-card-metric"><span class="metric-value">500K+</span> <span class="metric-label">global users</span></p>
-            </div>
-          </a>
-          
-          <!-- eBay -->
-          <a href="case-study.html?project=returns-experience" class="work-card">
-            <div class="work-card-image">
-              <img src="images/ebay-5-dollar-return.gif" alt="eBay - Returns Experience">
-              <div class="work-card-arrow">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </div>
-            </div>
-            <div class="work-card-content">
-              <div class="work-card-meta-row">
-                <span class="work-card-company">eBay</span>
-                <span class="work-card-dot"></span>
-                <span class="work-card-period">2017 – 2018</span>
-              </div>
-              <h3 class="work-card-title">Returns Experience</h3>
-              <p class="work-card-summary">Transformed the returns experience. 64% faster, $2.3M saved annually.</p>
-              <p class="work-card-metric"><span class="metric-value">+64%</span> <span class="metric-label">completion rate</span></p>
-            </div>
+          <a href="#contact-question" class="btn btn-ghost btn-lg">
+            Let’s Chat
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
         </div>
-        
-        <!-- Impact CTA -->
-        <div class="impact-cta">
-          <a href="impact.html" class="impact-cta-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-              <polyline points="16 7 22 7 22 13"></polyline>
-            </svg>
-            <span>See the numbers behind the work</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="section section-about">
-      <div class="about-gradient"></div>
-      <div class="container">
-        <!-- Title -->
-        <div class="about-header">
-          <p class="section-label">About Me</p>
-          <h2 class="section-title">
-            The human behind <span class="text-gradient">the screens</span>
-          </h2>
+      </div>
+
+      <div class="hero-portrait reveal" style="--d:.14s">
+        <div class="portrait-frame">
+          <img src="images/neha.png" alt="Neha Jangid" width="600" height="620">
+          <div class="portrait-shade" aria-hidden="true"></div>
         </div>
-        
-        <!-- Two-column layout: image left, content right -->
-        <div class="about-grid">
-          <!-- Image section - left column -->
-          <div class="about-image-wrapper">
-            <div class="about-image" id="photoEasterEgg">
-              <img src="images/profile-photo.jpg" alt="Michael Tsirakis" class="profile-photo" id="profilePhoto">
-              <img src="images/baby-photo.jpg" alt="Baby Michael - Easter egg!" class="baby-photo" id="babyPhoto">
-              <div class="about-image-overlay"></div>
-              <div class="about-image-frame"></div>
-              <div class="about-location-card glass" id="locationCard">
-                <div class="about-location-text">
-                  <p class="about-location-city" id="locationCity">Las Vegas, NV</p>
-                  <p class="about-location-origin" id="locationOrigin">Originally from Toronto</p>
-                </div>
-                <svg class="sparkle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
-                  <path d="M20 3v4"/>
-                  <path d="M22 5h-4"/>
-                  <path d="M4 17v2"/>
-                  <path d="M5 18H3"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Content section - right column -->
-          <div class="about-content">
-            <div class="about-text">
-              <p>Hey! I'm a Senior Interaction Designer at Netflix, where I get to work on AI experiences that reach millions of people.</p>
-              <p>Before Netflix, I spent time at Google, LinkedIn, Apple, and eBay. Along the way, I've learned that the best design happens when you really listen to people and keep things simple. I'm passionate about creating intuitive, accessible interfaces that make complex technology feel effortless.</p>
-              <p>I thrive in ambiguous problem spaces where research and prototyping can uncover unexpected solutions. Whether it's reimagining recruiter workflows or building AI-powered creative tools, I love turning complicated challenges into elegant experiences.</p>
-              <p>When I'm not designing, you'll probably find me on the basketball court, exploring a new city, or on the hunt for the perfect iced coffee.</p>
-            </div>
-            
-            <a href="michael-tsirakis-resume-2025.pdf" download="Michael-Tsirakis-Resume-2025.pdf" class="btn btn-primary about-resume-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-              Download Resume
-            </a>
-            
-            <div class="passions-grid">
-              <div class="passion-card" onclick="openCoffeeGame()">
-                <svg class="passion-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                  <line x1="6" y1="1" x2="6" y2="4"></line>
-                  <line x1="10" y1="1" x2="10" y2="4"></line>
-                  <line x1="14" y1="1" x2="14" y2="4"></line>
-                </svg>
-                <h4 class="passion-title">Iced Coffee Enthusiast</h4>
-                <div class="passion-text-wrapper">
-                  <p class="passion-desc">Fueled by cold brew, always</p>
-                  <span class="passion-hint">☕ Click to play!</span>
-                </div>
-              </div>
-              <div class="passion-card" onclick="openBasketballGame()">
-                <svg class="passion-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <circle cx="12" cy="12" r="6"></circle>
-                  <circle cx="12" cy="12" r="2"></circle>
-                </svg>
-                <h4 class="passion-title">Basketball Lover</h4>
-                <div class="passion-text-wrapper">
-                  <p class="passion-desc">Hoops keep me grounded</p>
-                  <span class="passion-hint">🏀 Click to play!</span>
-                </div>
-              </div>
-              <div class="passion-card" onclick="openTravelGame()">
-                <svg class="passion-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
-                </svg>
-                <h4 class="passion-title">World Traveler</h4>
-                <div class="passion-text-wrapper">
-                  <p class="passion-desc">30+ countries and counting</p>
-                  <span class="passion-hint">✈️ Click to play!</span>
-                </div>
-              </div>
-            </div>
+        <div class="portrait-badge glass">
+          <span class="dot"></span>
+          <div>
+            <p class="pb-title">Co-founder, DevMark Lab</p>
+            <p class="pb-sub">B2B SaaS organic growth</p>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section section-experience">
-      <!-- Marquee Banner -->
-      <div class="marquee-banner">
-        <div class="marquee-track">
-          <div class="marquee-content">
-            <span>AI Design</span>
-            <span>Machine Learning UX</span>
-            <span>Conversational Design</span>
-            <span>User Experience</span>
-            <span>Visual Design</span>
-            <span>Product Design</span>
-            <span>Prototyping</span>
-            <span>Interaction Design</span>
-            <span>User Flows</span>
-            <span>Product Strategy</span>
-            <span>Usability Testing</span>
-            <span>Design Systems</span>
-            <span>Journey Mapping</span>
-            <span>Responsive Design</span>
-            <span>Cross-Platform Design</span>
-            <span>Presentations</span>
-            <span>Heuristic Analysis</span>
-            <span>Adaptability</span>
-            <span>Collaboration</span>
-            <span>Figma</span>
-            <span>Adobe Suite</span>
-          </div>
-          <div class="marquee-content">
-            <span>AI Design</span>
-            <span>Machine Learning UX</span>
-            <span>Conversational Design</span>
-            <span>User Experience</span>
-            <span>Visual Design</span>
-            <span>Product Design</span>
-            <span>Prototyping</span>
-            <span>Interaction Design</span>
-            <span>User Flows</span>
-            <span>Product Strategy</span>
-            <span>Usability Testing</span>
-            <span>Design Systems</span>
-            <span>Journey Mapping</span>
-            <span>Responsive Design</span>
-            <span>Cross-Platform Design</span>
-            <span>Presentations</span>
-            <span>Heuristic Analysis</span>
-            <span>Adaptability</span>
-            <span>Collaboration</span>
-            <span>Figma</span>
-            <span>Adobe Suite</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="container experience-container">
-        <div class="section-header">
-          <p class="section-label">Where I've Been</p>
-          <h2 class="section-title">My Journey</h2>
-        </div>
-        
-        <div class="timeline">
-          <div class="timeline-item current">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-company">Netflix</h3>
-                  <p class="timeline-role">Senior Interaction Designer</p>
-                </div>
-                <div class="timeline-meta">
-                  <span class="current-badge">Current</span>
-                  <span class="timeline-period">2025 — Present</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-company">Google</h3>
-                  <p class="timeline-role">Senior Interaction Designer</p>
-                </div>
-                <span class="timeline-period">2021 — 2025</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-company">LinkedIn</h3>
-                  <p class="timeline-role">Product Designer</p>
-                </div>
-                <span class="timeline-period">2019 — 2021</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-company">Apple</h3>
-                  <p class="timeline-role">UX Designer</p>
-                </div>
-                <span class="timeline-period">2018 — 2019</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-company">eBay</h3>
-                  <p class="timeline-role">UX Designer</p>
-                </div>
-                <span class="timeline-period">2017 — 2018</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Leadership & Community Section -->
-    <section id="leadership" class="section section-leadership">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">Giving Back</p>
-          <h2 class="section-title">Beyond Work</h2>
-        </div>
-        
-        <div class="leadership-grid">
-          <!-- Speaking -->
-          <div class="leadership-card glass">
-            <div class="leadership-header">
-              <div class="leadership-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                  <line x1="12" x2="12" y1="19" y2="22"></line>
-                </svg>
-              </div>
-              <div>
-                <h3>Speaking</h3>
-                <p class="leadership-subtitle">Guest Presentations</p>
-              </div>
-            </div>
-            <div class="speaking-list">
-              <div class="speaking-item">
-                <div class="speaking-school">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                  </svg>
-                  <span>SCAD</span>
-                </div>
-                <span class="speaking-topic">AI & Design</span>
-              </div>
-              <div class="speaking-item">
-                <div class="speaking-school">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                  </svg>
-                  <span>UC Berkeley</span>
-                </div>
-                <span class="speaking-topic">Design Portfolios</span>
-              </div>
-              <div class="speaking-item">
-                <div class="speaking-school">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                  </svg>
-                  <span>Sheridan College</span>
-                </div>
-                <span class="speaking-topic">Design Portfolios</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Judging -->
-          <div class="leadership-card glass">
-            <div class="leadership-header">
-              <div class="leadership-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="8" r="6"></circle>
-                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
-                </svg>
-              </div>
-              <div>
-                <h3>Judging</h3>
-                <p class="leadership-subtitle">Design Competitions</p>
-              </div>
-            </div>
-            <div class="judging-card">
-              <p class="judging-title">SCAD StartUp '26</p>
-              <p class="judging-description">Semi-Finals Judge for SCAD's annual design entrepreneurship competition.</p>
-              <span class="upcoming-badge">Upcoming</span>
-            </div>
-          </div>
-
-          <!-- Mentorship -->
-          <div class="leadership-card glass">
-            <div class="leadership-header">
-              <div class="leadership-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <div>
-                <h3>Mentorship</h3>
-                <p class="leadership-subtitle">Portfolio Reviews</p>
-              </div>
-            </div>
-            <div class="testimonial-cards">
-              <div class="testimonial-card">
-                <p class="testimonial-quote">"Michael helped me completely rethink my case study structure. My projects finally tell a compelling story instead of just listing features."</p>
-                <p class="testimonial-author">— SCAD Student</p>
-              </div>
-              <div class="testimonial-card">
-                <p class="testimonial-quote">"He pushed me to inject more of my personality into my portfolio. It finally feels like me, not just another generic design site."</p>
-                <p class="testimonial-author">— SCAD Student</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section section-testimonials">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">Kind Words</p>
-          <h2 class="section-title">What People Say</h2>
-        </div>
-        
-        <div class="testimonials-grid">
-          <div class="testimonial-card-large glass">
-            <svg class="testimonial-quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
-              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
-            </svg>
-            <p class="testimonial-text">"Michael brought super useful and great insights to the table. He always demonstrated solid experience in the tools and system we used, and was always open-minded, receptive to feedback and extremely easy to work with."</p>
-            <div class="testimonial-author-info">
-              <p class="testimonial-author-name">Rayana</p>
-              <p class="testimonial-author-role">Senior Software Engineer, Google</p>
-            </div>
-          </div>
-          
-          <div class="testimonial-card-large glass">
-            <svg class="testimonial-quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
-              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
-            </svg>
-            <p class="testimonial-text">"Michael is an MVP teammate that any company is lucky to have. He has the amazing ability to grasp complicated systems in a very short time. Michael can also quickly create a lot of content and is very thoughtful and generous with his feedback."</p>
-            <div class="testimonial-author-info">
-              <p class="testimonial-author-name">Steven</p>
-              <p class="testimonial-author-role">Product Designer, LinkedIn</p>
-            </div>
-          </div>
-          
-          <div class="testimonial-card-large glass">
-            <svg class="testimonial-quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
-              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
-            </svg>
-            <p class="testimonial-text">"Thanks for your outstanding work the last couple months helping craft our MarkEng vision. Your ability to transform our strategy document into a compelling story is superb! Your future looking mocks will be used by a VP of marketing to pitch our value."</p>
-            <div class="testimonial-author-info">
-              <p class="testimonial-author-name">Alex</p>
-              <p class="testimonial-author-role">Group Product Manager, Google</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-contact">
-      <div class="contact-gradient"></div>
-      <div class="container">
-        <div class="contact-content">
-          <p class="section-label">Let's Connect</p>
-          <h2 class="contact-title">
-            Say hi, I'd
-            <br>
-            <span class="text-gradient">love to chat</span>
-          </h2>
-          <p class="contact-description">
-            Whether you want to talk design, collaborate on something cool, 
-            or have me speak at your school — drop me a line! 
-            I'm always happy to connect.
-          </p>
-          <a href="mailto:mtsirakis@gmail.com" class="btn btn-gold btn-large">
-            Say Hello
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
-          </a>
-          <div class="social-links">
-            <a href="mailto:mtsirakis@gmail.com" class="social-link" aria-label="Email">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/mtsirakis" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>© <span id="year"></span> Michael Tsirakis</p>
-      <p>Fueled by iced coffee ☕ <span class="text-primary">·</span> Shipped from Las Vegas</p>
     </div>
-  </footer>
+  </section>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <line x1="12" y1="19" x2="12" y2="5"></line>
-      <polyline points="5 12 12 5 19 12"></polyline>
-    </svg>
-  </button>
-
-  <!-- Mini Game Modals -->
-  <!-- Coffee Catch Game -->
-  <div class="game-modal" id="coffeeGameModal">
-    <div class="game-modal-backdrop" onclick="closeCoffeeGame()"></div>
-    <div class="game-modal-content">
-      <div class="game-header">
-        <div class="game-title">
-          <span>☕</span>
-          <h3>Iced Coffee Catch!</h3>
-        </div>
-        <div class="game-header-actions">
-          <button class="mute-btn" onclick="toggleGameMute()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 5-6 4H2v6h3l6 4V5zM15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-          </button>
-          <button class="close-btn" onclick="closeCoffeeGame()">✕</button>
-        </div>
+  <!-- ============ DEVMARK BAND ============ -->
+  <section class="band">
+    <div class="wrap band-inner reveal">
+      <a href="https://devmarklab.com/" target="_blank" rel="noopener" class="band-logo">
+        <img src="images/devmarklab-logo.png" alt="DevMark Lab" width="466" height="132">
+      </a>
+      <div class="band-copy">
+        <p class="eyebrow">Co-founder of DevMark Lab</p>
+        <p class="band-text">
+          Founder <strong>Divanshu</strong> brings 10+ years of experience, and I bring 6+ years of
+          B2B SaaS SEO and organic marketing experience. Together, we lead an
+          <strong>eight-person team</strong> of skilled specialists across SEO, content, and organic growth.
+        </p>
       </div>
-      <div class="game-stats">
-        <span>Score: <strong id="coffeeScore">0</strong></span>
-        <span>Combo: <strong id="coffeeCombo">0</strong></span>
-        <span>Lives: <span id="coffeeLives">☕☕☕</span></span>
-      </div>
-      <div class="game-stats-row">
-        <span>Best: <span id="coffeeHighScore">0</span></span>
-      </div>
-      <div class="game-area coffee-game-area" id="coffeeGameArea">
-        <div class="hit-flash-overlay" id="coffeeHitFlash"></div>
-        <div class="coffee-cup" id="coffeeCup">🥤</div>
-        <div class="game-over-overlay" id="coffeeGameOver">
-          <p class="game-over-title">Game Over!</p>
-          <p>You caught <strong id="coffeeFinalScore">0</strong> iced coffees!</p>
-          <button class="game-btn" onclick="resetCoffeeGame(); startCoffeeGame();">Play Again</button>
-        </div>
-      </div>
-      <div class="mobile-slider-control" id="coffeeMobileSlider">
-        <div class="slider-track"></div>
-        <div class="slider-thumb" id="coffeeSliderThumb">🥤</div>
-      </div>
-      <p class="mobile-slider-hint" id="coffeeMobileHint">Slide to move cup ↔️</p>
-      <p class="game-hint">Catch 🧊☕ iced coffee • Avoid 🔥☕ hot coffee</p>
+      <a href="https://devmarklab.com/" target="_blank" rel="noopener" class="link-arrow">Meet the team at DevMark Lab
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
     </div>
-  </div>
+  </section>
 
-  <!-- Basketball Game -->
-  <div class="game-modal" id="basketballGameModal">
-    <div class="game-modal-backdrop" onclick="closeBasketballGame()"></div>
-    <div class="game-modal-content">
-      <div class="game-header">
-        <div class="game-title">
-          <span>🏀</span>
-          <h3>Shoot Hoops!</h3>
-        </div>
-        <div class="game-header-actions">
-          <button class="mute-btn" onclick="toggleGameMute()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 5-6 4H2v6h3l6 4V5zM15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-          </button>
-          <button class="close-btn" onclick="closeBasketballGame()">✕</button>
-        </div>
-      </div>
-      <div class="game-mode-toggles">
-        <button class="mode-toggle-btn" id="movingHoopBtn" onclick="toggleMovingHoop()">🎯 Moving Hoop</button>
-        <button class="mode-toggle-btn" id="timerModeBtn" onclick="toggleTimerMode()">⏱️ Timer Mode</button>
-      </div>
-      <div class="game-stats">
-        <span>Score: <strong id="basketballScore">0</strong></span>
-        <span>Streak: <strong id="basketballStreak">🔥 0</strong></span>
-        <span>Best: <span id="basketballBest">0</span></span>
-      </div>
-      <div class="game-area basketball-game-area">
-        <div class="basketball-hoop" id="basketballHoop">
-          <div class="backboard"></div>
-          <div class="rim"></div>
-          <div class="net"></div>
-        </div>
-        <div class="game-result" id="basketballResult"></div>
-        <div class="basketball" id="basketballBall"></div>
-        <div class="court-floor"></div>
-        <div class="game-over-overlay" id="basketballTimerEnd">
-          <p class="game-over-title">Time's Up!</p>
-          <p>Final Score: <strong id="basketballFinalScore">0</strong></p>
-          <button class="game-btn" onclick="resetBasketballGame()">Play Again</button>
-        </div>
-      </div>
-      <div class="game-controls">
-        <div class="control-row">
-          <span class="control-label">Power</span>
-          <input type="range" id="powerSlider" min="20" max="80" value="50">
-          <span class="control-value" id="powerValue">50%</span>
-        </div>
-        <div class="control-row">
-          <span class="control-label">Angle</span>
-          <input type="range" id="angleSlider" min="30" max="65" value="45">
-          <span class="control-value" id="angleValue">45°</span>
-        </div>
-      </div>
-      <div class="game-actions">
-        <button class="game-btn primary" onclick="shootBasketball()">Shoot! 🏀</button>
-        <button class="game-btn" onclick="resetBasketballGame()">Reset</button>
-      </div>
-      <p class="game-hint">Sweet spot: ~55% power, ~47° angle (green = in range)</p>
+  <!-- ============ CLIENT MARQUEE ============ -->
+  <section class="clients">
+    <div class="wrap reveal">
+      <h2 class="clients-title">SaaS teams I have worked with</h2>
+      <p class="clients-sub">From API-first products and developer tools to established B2B software.</p>
     </div>
-  </div>
 
-  <!-- Travel Memory Game -->
-  <div class="game-modal" id="travelGameModal">
-    <div class="game-modal-backdrop" onclick="closeTravelGame()"></div>
-    <div class="game-modal-content">
-      <div class="game-header">
-        <div class="game-title">
-          <span>✈️</span>
-          <h3>Travel Memory</h3>
+    <div class="marquee reveal" aria-label="Clients I have worked with">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>SoftwareSuggest</span><i></i>
+          <span>SocialKit</span><i></i>
+          <span>CaptureKit</span><i></i>
+          <span>Templated</span><i></i>
+          <span>ChartDB</span><i></i>
+          <span>PostPeer</span><i></i>
+          <span>Easyretro</span><i></i>
+          <span>Slideasy</span><i></i>
+          <span>Kaaj.ai</span><i></i>
+          <span>Scrapingdog</span><i></i>
+          <span>FlightAPI</span><i></i>
+          <span>MakCorps</span><i></i>
         </div>
-        <div class="game-header-actions">
-          <button class="mute-btn" onclick="toggleGameMute()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 5-6 4H2v6h3l6 4V5zM15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-          </button>
-          <button class="close-btn" onclick="closeTravelGame()">✕</button>
+        <div class="marquee-group" aria-hidden="true">
+          <span>SoftwareSuggest</span><i></i>
+          <span>SocialKit</span><i></i>
+          <span>CaptureKit</span><i></i>
+          <span>Templated</span><i></i>
+          <span>ChartDB</span><i></i>
+          <span>PostPeer</span><i></i>
+          <span>Easyretro</span><i></i>
+          <span>Slideasy</span><i></i>
+          <span>Kaaj.ai</span><i></i>
+          <span>Scrapingdog</span><i></i>
+          <span>FlightAPI</span><i></i>
+          <span>MakCorps</span><i></i>
         </div>
       </div>
-      <div class="game-stats">
-        <span>Moves: <strong id="travelMoves">0</strong></span>
-        <span>Matches: <strong id="travelMatches">0/8</strong></span>
-        <span>Best: <span id="travelBest">—</span></span>
-      </div>
-      <div class="memory-grid" id="travelGrid"></div>
-      <div class="travel-win" id="travelWin">
-        <p class="game-over-title">🎉 World Traveler!</p>
-        <p>Completed in <strong id="travelFinalMoves">0</strong> moves!</p>
-      </div>
-      <button class="game-btn" onclick="initTravelGame(); hideTravelWin();" style="width: 100%; margin-top: 1rem;">
-        <span>↺</span> Restart
-      </button>
-      <p class="game-hint">Match all the destinations I've visited!</p>
     </div>
-  </div>
 
+    <div class="wrap reveal">
+      <p class="clients-more">+ 30 more SaaS products</p>
+    </div>
+  </section>
 
-  <!-- Work Modal / Bottom Sheet -->
-  <div class="work-modal" id="workModal">
-    <div class="work-modal-backdrop" onclick="closeWorkModal()"></div>
-    <div class="work-modal-content" id="workModalContent">
-      <!-- Header -->
-      <div class="work-modal-header">
-        <div class="work-modal-handle"></div>
-        <div class="work-modal-header-content">
-          <div class="work-modal-title-row">
-            <h3 class="work-modal-company" id="modalCompany">Google</h3>
-            <span class="work-modal-nda" id="modalNda" style="display: none;">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <header class="sec-head sec-head-center reveal">
+        <p class="eyebrow">Services</p>
+        <h2 class="sec-title">
+          Everything your brand needs to get more traffic, visibility, and
+          <span class="grad">overall growth</span>
+        </h2>
+        <p class="sec-lede">
+          One connected organic growth strategy across search, AI, content, video, PR, and
+          communities — built around your buyers and tied to meaningful business outcomes.
+          I lead the strategy alongside our eight-person team, bringing focused expertise,
+          consistent execution, and clear accountability to every channel.
+        </p>
+      </header>
+
+      <div class="pillars">
+        <div class="reveal">
+          <article class="pillar-card">
+            <div class="pillar-top">
+              <span class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                  <path d="M11 8v6M8 11h6"></path>
+                </svg>
+              </span>
+              <span class="pillar-num">01</span>
+            </div>
+            <h3 class="pillar-name">Be Found</h3>
+            <p class="pillar-headline">Show up wherever your buyers search</p>
+            <p class="pillar-desc">
+              Build a discoverable brand across traditional search and AI platforms so your product
+              appears when high-intent buyers are actively looking for answers and solutions.
+            </p>
+          </article>
+        </div>
+        <div class="reveal" style="--d:.08s">
+          <article class="pillar-card">
+            <div class="pillar-top">
+              <span class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2.5 14.9 8.4l6.6.95-4.75 4.63 1.12 6.52L12 17.4l-5.87 3.1 1.12-6.52L2.5 9.35l6.6-.95z"></path>
+                </svg>
+              </span>
+              <span class="pillar-num">02</span>
+            </div>
+            <h3 class="pillar-name">Be Chosen</h3>
+            <p class="pillar-headline">Turn attention into trust — and trust into action</p>
+            <p class="pillar-desc">
+              Create buyer-focused content that explains your value, strengthens your positioning,
+              and gives potential customers a compelling reason to choose your product.
+            </p>
+          </article>
+        </div>
+        <div class="reveal" style="--d:.16s">
+          <article class="pillar-card">
+            <div class="pillar-top">
+              <span class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9.5"></circle>
+                  <path d="M2.5 12h19"></path>
+                  <path d="M12 2.5a15 15 0 0 1 0 19a15 15 0 0 1 0-19z"></path>
+                </svg>
+              </span>
+              <span class="pillar-num">03</span>
+            </div>
+            <h3 class="pillar-name">Be Everywhere</h3>
+            <p class="pillar-headline">Build authority that strengthens every channel</p>
+            <p class="pillar-desc">
+              Expand your reach beyond owned content with credible mentions, relevant links, and
+              consistent distribution that make your entire organic presence more authoritative.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="pillar-services">
+        <div class="svc-stack reveal">
+          <div class="svc-card">
+            <span class="svc-idx">01</span>
+            <h4>SEO Strategy &amp; Technical SEO</h4>
+            <p>Turn your website into a stronger growth foundation with strategic audits, scalable site architecture, and technical improvements that help search engines crawl, understand, and rank your product.</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-idx">02</span>
+            <h4>Programmatic SEO</h4>
+            <p>Capture hundreds of valuable long-tail searches with scalable, template-driven pages — without sacrificing relevance, usefulness, or quality.</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-idx">03</span>
+            <h4>GEO &amp; AI Search</h4>
+            <p>Increase your chances of being discovered and cited across ChatGPT, Perplexity, Google AI Overviews, and other AI-driven search experiences.</p>
+          </div>
+        </div>
+        <div class="svc-stack reveal" style="--d:.08s">
+          <div class="svc-card">
+            <span class="svc-idx">01</span>
+            <h4>Content Strategy &amp; Writing</h4>
+            <p>Product-led content mapped to real buyer intent — created to earn visibility, answer buying questions, communicate your differentiation, and convert interest into action.</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-idx">02</span>
+            <h4>YouTube</h4>
+            <p>Search-led videos designed to build trust, rank across YouTube and Google, and turn one powerful idea into assets for your wider content engine.</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-idx">03</span>
+            <h4>LinkedIn</h4>
+            <p>Founder and brand-led content that builds authority, starts relevant conversations, and keeps your product visible to the people who influence buying decisions.</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-idx">04</span>
+            <h4>Reddit &amp; Communities</h4>
+            <p>Build a credible presence in the conversations where buyers exchange recommendations, compare products, and increasingly influence what AI platforms surface.</p>
+          </div>
+        </div>
+        <div class="svc-stack reveal" style="--d:.16s">
+          <div class="svc-card">
+            <span class="svc-idx">01</span>
+            <h4>Digital PR</h4>
+            <p>Turn your expertise, insights, and original stories into coverage that earns attention, strengthens credibility, and generates valuable mentions from relevant publications.</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-idx">02</span>
+            <h4>Link Building &amp; Backlinks</h4>
+            <p>Earn relevant, high-authority backlinks that improve rankings and brand authority — without directories, PBNs, or shortcuts that put your website at risk.</p>
+          </div>
+          <div class="svc-card">
+            <span class="svc-idx">03</span>
+            <h4>Omnichannel Distribution</h4>
+            <p>Transform every strong content idea into multiple channel-ready assets, helping your brand reach more buyers without constantly starting from zero.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Equation -->
+      <div class="equation reveal">
+        <div class="eq-row">
+          <span class="eq-chip">01</span><span class="eq-op">+</span>
+          <span class="eq-chip">02</span><span class="eq-op">+</span>
+          <span class="eq-chip">03</span><span class="eq-op eq-eq">=</span>
+        </div>
+        <h3 class="eq-title">Organic visibility that <span class="grad">drives growth</span></h3>
+        <p class="eq-sub">
+          Search, content, and authority working together to bring in the right traffic —
+          and turn more of it into signups and revenue.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process" class="section section-alt">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <h2 class="sec-title">How We <span class="grad">Work</span></h2>
+        <p class="sec-lede">
+          Every SaaS product solves a specific problem for a specific audience. So before we build
+          your growth strategy, we understand your product, your buyers, and what makes them choose you.
+        </p>
+      </header>
+
+      <ol class="rail">
+        <li class="step reveal">
+          <div class="step-node"><span>01</span></div>
+          <div class="step-card">
+            <h3>You share the context</h3>
+            <ul class="tags">
+              <li>Website</li><li>Competitors</li><li>Business goals</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="step reveal">
+          <div class="step-node"><span>02</span></div>
+          <div class="step-card">
+            <h3>We learn your business</h3>
+            <ul class="tags">
+              <li>Product</li><li>ICP</li><li>Positioning</li><li>Market</li><li>GA / GSC</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="step reveal">
+          <div class="step-node"><span>03</span></div>
+          <div class="step-card">
+            <h3>We find the growth opportunities</h3>
+            <ul class="tags">
+              <li>Technical</li><li>Content</li><li>Competitors</li><li>Search &amp; AI visibility</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="step reveal">
+          <div class="step-node"><span>04</span></div>
+          <div class="step-card">
+            <h3>We build your organic growth roadmap</h3>
+            <ul class="tags">
+              <li>Priorities</li><li>Channels</li><li>Deliverables</li><li>KPIs</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="step reveal">
+          <div class="step-node"><span>05</span></div>
+          <div class="step-card">
+            <h3>Our team puts it into action</h3>
+            <ul class="tags">
+              <li>Quality-first execution</li><li>Tracking</li><li>Continuous improvement</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="step step-growth reveal">
+          <div class="step-node node-accent"><span>06</span></div>
+          <div class="step-card card-accent">
+            <h3>Growth starts</h3>
+            <div class="chain">
+              <span class="chain-item">Visibility <i>↑</i></span>
+              <span class="chain-arrow" aria-hidden="true"></span>
+              <span class="chain-item">ICP traffic <i>↑</i></span>
+              <span class="chain-arrow" aria-hidden="true"></span>
+              <span class="chain-item">Qualified signups <i>↑</i></span>
+              <span class="chain-arrow" aria-hidden="true"></span>
+              <span class="chain-item">Revenue opportunities <i>↑</i></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="step step-last reveal">
+          <div class="step-node"><span>07</span></div>
+          <div class="step-card">
+            <h3>We monitor, learn &amp; adapt</h3>
+            <ul class="tags">
+              <li>Continuous performance tracking</li><li>New growth opportunities</li><li>Custom improvements</li>
+            </ul>
+            <div class="loop">
+              <svg class="loop-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <polyline points="1 20 1 14 7 14"></polyline>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
               </svg>
-              NDA
+              <span>Review</span><em>→</em><span>Improve</span><em>→</em><span>Implement</span><em>→</em><span>Measure</span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="voices" class="section">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <h2 class="sec-title">What SaaS founders &amp; teams <span class="grad">say about us</span></h2>
+        <p class="sec-lede">
+          Hear directly from founders and marketing teams about the thinking, communication,
+          and outcomes behind our work.
+        </p>
+      </header>
+
+      <div class="video-grid reveal">
+        <button class="video-card" data-video="FA9HyuKmG0I" aria-label="Play video testimonial 1">
+          <img src="https://i.ytimg.com/vi/FA9HyuKmG0I/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+          </span>
+        </button>
+        <button class="video-card" data-video="fe6_FL-MdQ4" aria-label="Play video testimonial 2">
+          <img src="https://i.ytimg.com/vi/fe6_FL-MdQ4/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+          </span>
+        </button>
+        <button class="video-card" data-video="XYI_UWwjkto" aria-label="Play video testimonial 3">
+          <img src="https://i.ytimg.com/vi/XYI_UWwjkto/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+          </span>
+        </button>
+        <button class="video-card" data-video="-RgG8pM4CGs" aria-label="Play video testimonial 4">
+          <img src="https://i.ytimg.com/vi/-RgG8pM4CGs/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="quote-grid">
+        <figure class="quote-card reveal">
+          <svg class="q-mark" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.76-2.02-2-2H4c-1.25 0-2 .75-2 1.97V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .01-1 1.03V21c0 1 0 1 1 1z"></path>
+            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.76-2.02-2-2h-4c-1.25 0-2 .75-2 1.97V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+          </svg>
+          <blockquote>
+            It has been great working with Neha. She is super responsive, attentive to details and
+            hard working. She helps us a lot with our SEO and content initiatives. I recommend her
+            work to anyone looking to improve their online presence and SEO. Thanks, Neha!
+          </blockquote>
+          <figcaption>
+            <span class="q-name">Pedro</span>
+            <span class="q-role">Founder, Templated</span>
+          </figcaption>
+        </figure>
+
+        <figure class="quote-card reveal">
+          <svg class="q-mark" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.76-2.02-2-2H4c-1.25 0-2 .75-2 1.97V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .01-1 1.03V21c0 1 0 1 1 1z"></path>
+            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.76-2.02-2-2h-4c-1.25 0-2 .75-2 1.97V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+          </svg>
+          <blockquote>
+            I’ve been working with Neha on 2 of my products already: CaptureKit (got acquired), and
+            SocialKit, my current product. It’s been awesome working with her; she’s professional,
+            and the communication is great. Soon we’ll work again on a new SaaS of mine.
+            So I really recommend her services :)
+          </blockquote>
+          <figcaption>
+            <span class="q-name">Jonathan</span>
+            <span class="q-role">Co-founder, PostPeer</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE STUDIES ============ -->
+  <section id="work" class="section section-alt">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <h2 class="sec-title">The work behind <span class="grad">the growth</span></h2>
+        <p class="sec-lede">
+          A look at how deeper audits, sharper priorities, and focused execution helped two SaaS
+          products overcome organic growth barriers.
+        </p>
+      </header>
+
+      <div class="work-grid">
+        <a href="case-study-01.html" class="work-card reveal">
+          <div class="work-card-image">
+            <img src="images/case-study-01-gsc.png" alt="Search Console performance for case study 01: 20.8K clicks and 940K impressions." loading="lazy">
+            <span class="work-card-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </span>
           </div>
-          <button class="work-modal-close" onclick="closeWorkModal()">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
+          <div class="work-card-content">
+            <div class="work-card-meta">
+              <span>Case study 01</span>
+              <span class="work-card-dot"></span>
+              <span>Niche SaaS product</span>
+              <span class="work-card-dot"></span>
+              <span>5 months</span>
+            </div>
+            <h3 class="work-card-title">From a long SEO plateau to consistent organic growth</h3>
+            <p class="work-card-summary">
+              Years of SEO activity without momentum. We fixed the foundations, strengthened existing
+              content, and rebuilt the strategy around ICP search intent and conversion.
+            </p>
+            <p class="work-card-metric">
+              <span class="metric-value"><i>≈</i>100%</span>
+              <span class="metric-label">higher daily organic traffic run rate</span>
+            </p>
+            <span class="work-card-cta">Read the full case study
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="case-study-02.html" class="work-card reveal" style="--d:.08s">
+          <div class="work-card-image">
+            <img src="images/case-study-02-gsc.png" alt="Search Console performance for case study 02: 218K clicks and 9.85M impressions." loading="lazy">
+            <span class="work-card-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </span>
+          </div>
+          <div class="work-card-content">
+            <div class="work-card-meta">
+              <span>Case study 02</span>
+              <span class="work-card-dot"></span>
+              <span>Healthy search demand</span>
+              <span class="work-card-dot"></span>
+              <span>1+ year</span>
+            </div>
+            <h3 class="work-card-title">From scaled AI content to structured organic growth</h3>
+            <p class="work-card-summary">
+              Content at scale without structure. We strengthened the technical foundation, added
+              quality control, and filled high-intent gaps across the buyer journey.
+            </p>
+            <p class="work-card-metric">
+              <span class="metric-value"><i>≈</i>500%</span>
+              <span class="metric-label">higher daily organic traffic run rate</span>
+            </p>
+            <span class="work-card-cta">Read the full case study
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <p class="disclaimer reveal">
+        Disclaimer: client identities, website details, and commercially sensitive information have
+        been withheld for confidentiality.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <h2 class="sec-title">Let’s find your next <span class="grad">organic growth opportunity</span></h2>
+        <p class="sec-lede">
+          Whether you need a complete organic growth strategy, support with a specific project, or an
+          expert answer to one question — choose the option that works best for you.
+        </p>
+      </header>
+
+      <div class="options">
+        <!-- Option 1 -->
+        <div class="option option-primary reveal">
+          <span class="option-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4.5" width="18" height="16" rx="2.5"></rect>
+              <path d="M3 9.5h18M8 2.5v4M16 2.5v4"></path>
+              <path d="M9 14.5l2 2 4-4"></path>
             </svg>
-          </button>
+          </span>
+          <p class="option-label">Book a free consultation</p>
+          <h3>Bring your SaaS. Your goals. Your biggest roadblock.</h3>
+          <p class="option-text">
+            In a free 30-minute consultation, we’ll discuss your product, current organic performance,
+            and what may be limiting your visibility, traffic, or signups.
+          </p>
+          <p class="option-text">
+            You’ll leave with a clearer understanding of what deserves attention next — and whether
+            we’re the right team to help you execute it.
+          </p>
+          <a href="https://cal.com/neha-jangid-fucuhx" target="_blank" rel="noopener" class="btn btn-accent btn-block">
+            Book your free 30-minute consultation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
-      </div>
-      
-      <!-- Scrollable Content -->
-      <div class="work-modal-scroll">
-        <!-- Project Tabs -->
-        <div class="work-modal-tabs" id="modalTabs"></div>
-        
-        <!-- Two Column Layout on Desktop -->
-        <div class="work-modal-two-column">
-          <!-- Left: Image Carousel -->
-          <div class="work-modal-carousel-column">
-            <div class="work-modal-carousel" id="modalCarousel">
-              <div class="work-modal-images" id="modalImages"></div>
-              <div class="work-modal-dots" id="modalDots"></div>
-            </div>
-          </div>
-          
-          <!-- Right: Details -->
-          <div class="work-modal-details-column">
-            <div class="work-modal-details">
-              <!-- Title & Meta Header -->
-              <div class="work-modal-header-section">
-                <h4 class="work-modal-project-title" id="modalProjectTitle"></h4>
-                <div class="work-modal-meta-tags" id="modalMetaTags"></div>
-                <p class="work-modal-project-desc" id="modalProjectDesc"></p>
-              </div>
-              
-              <!-- Key Metrics - Hero style -->
-              <div class="work-modal-metrics-grid" id="modalMetrics"></div>
-              
-              <!-- Challenge & Approach -->
-              <div class="work-modal-challenge-approach" id="modalChallengeApproach"></div>
-              
-              <!-- What I Did - Enhanced list -->
-              <div class="work-modal-contributions" id="modalContributions"></div>
-              
-              <!-- The Result - Premium highlight -->
-              <div class="work-modal-result" id="modalResult"></div>
-              
-              <!-- Skills - Tag cloud -->
-              <div class="work-modal-skills-section">
-                <h5 class="work-modal-skills-label">Skills & Methods</h5>
-                <div class="work-modal-skills" id="modalSkills"></div>
-              </div>
-              
-              <!-- NDA Notice -->
-              <div class="work-modal-nda-notice" id="modalNdaNotice" style="display: none;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-                <span>Details generalized under NDA</span>
-              </div>
-            </div>
+
+        <!-- Option 2 -->
+        <div class="option reveal" style="--d:.08s">
+          <span class="option-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2.5" y="7" width="19" height="13.5" rx="2.5"></rect>
+              <path d="M8.5 7V5.5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2V7"></path>
+              <path d="M2.5 12.5h19"></path>
+            </svg>
+          </span>
+          <p class="option-label">Prefer a freelance platform?</p>
+          <h3>Work with me through a platform you already trust</h3>
+          <p class="option-text">
+            If you prefer the payments, protection, and project management offered by an established
+            freelance platform, you can connect and work with me directly through Fiverr or Upwork.
+          </p>
+          <div class="option-btns">
+            <a href="https://www.fiverr.com/neha9001/" target="_blank" rel="noopener" class="btn btn-ghost btn-block">Work with me on Fiverr</a>
+            <a href="https://www.upwork.com/freelancers/nehajangid?mp_source=share" target="_blank" rel="noopener" class="btn btn-ghost btn-block">Work with me on Upwork</a>
           </div>
         </div>
+
+        <!-- Option 3 -->
+        <div class="option reveal" style="--d:.16s" id="contact-question">
+          <span class="option-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.6A8.4 8.4 0 1 1 21 11.5z"></path>
+              <path d="M9.6 9.3a2.4 2.4 0 0 1 4.7.7c0 1.6-2.3 2-2.3 2"></path>
+              <path d="M12 15.6h.01"></path>
+            </svg>
+          </span>
+          <p class="option-label">Have a question first?</p>
+          <h3>Ask me one organic growth question</h3>
+          <p class="option-text">
+            Have a question about SEO, content, AI search, organic visibility, traffic, conversions,
+            or any other part of organic marketing? Send me one specific question along with a little
+            context. I’ll personally review it and reply with a clear, practical answer you can act on.
+          </p>
+
+          <form class="ask-form" id="askForm" novalidate>
+            <label>
+              <span>Your website URL</span>
+              <input type="url" name="website" placeholder="https://yourproduct.com" required>
+            </label>
+            <label>
+              <span>Your question</span>
+              <textarea name="question" rows="4" placeholder="What’s the one thing you want answered?" required></textarea>
+            </label>
+            <label>
+              <span>Your email address</span>
+              <input type="email" name="email" placeholder="you@company.com" required>
+            </label>
+            <button type="submit" class="btn btn-accent btn-block">
+              Ask your question
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <p class="form-note" id="formNote">
+              One question per submission. The more context you share, the more useful I can make my answer.
+            </p>
+          </form>
+        </div>
       </div>
-      
-      <!-- Footer CTA -->
-      <div class="work-modal-footer">
-        <a href="#contact" class="btn btn-primary work-modal-cta" onclick="closeWorkModal()">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-          </svg>
-          Reach Out for More Info
+
+      <p class="options-foot reveal">
+        Not sure which option to choose? <strong>Start with a question.</strong>
+        A valuable growth conversation doesn’t have to begin with a sales call.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="section section-alt">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">FAQs</p>
+        <h2 class="sec-title">Questions SaaS founders usually ask <span class="grad">before we start</span></h2>
+        <p class="sec-lede">
+          Clear answers about how we work, what to expect, and whether we’re the right fit for your product.
+        </p>
+      </header>
+
+      <div class="faq reveal">
+        <details class="faq-item">
+          <summary>Will I work directly with you or with your team?</summary>
+          <div class="faq-body"><p>You’ll work directly with me during discovery, strategy, prioritization, and important decisions. Our specialists support execution across SEO, content, and other organic channels, while I remain closely involved throughout the engagement.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What types of companies do you work with?</summary>
+          <div class="faq-body"><p>We work primarily with B2B SaaS companies, API-first products, developer tools, and technical software businesses — from early-stage startups to established products looking to strengthen or scale organic acquisition.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you work alongside our existing marketing or development team?</summary>
+          <div class="faq-body"><p>Yes. We can lead your organic growth roadmap or collaborate with your existing SEO, content, marketing, and development teams. Responsibilities, workflows, and approvals are clearly defined before execution begins.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you provide strategy only, or do you also execute it?</summary>
+          <div class="faq-body"><p>Both. We identify opportunities, create the roadmap, and help execute the work across technical SEO, content, AI search, video, digital PR, backlinks, communities, and organic distribution.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens before you create the strategy?</summary>
+          <div class="faq-body"><p>We first understand your product, ICP, positioning, competitors, goals, and current performance. We then audit your website, content, technical foundation, and organic visibility before recommending what should happen next.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What access will you need?</summary>
+          <div class="faq-body"><p>Depending on the project, we may request access to Google Analytics, Google Search Console, your CMS, and relevant SEO or reporting tools. We only request the access required to understand performance and complete the agreed work.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Will anything be published or implemented without our approval?</summary>
+          <div class="faq-body"><p>No. Important content, recommendations, and website changes are reviewed before implementation or publishing. Your team stays informed, and nothing substantial goes live without the agreed approval process.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Our niche has low search volume. Can organic marketing still work?</summary>
+          <div class="faq-body">
+            <p>Yes. SaaS and API products often serve specific audiences whose demand is spread across problems, use cases, integrations, comparisons, documentation, and highly technical searches.</p>
+            <p>These searches may have lower volume, but they can carry much stronger buying intent. We evaluate the complete search journey, competition, ICP relevance, and conversion potential — not keyword volume alone.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How long does it take to see results?</summary>
+          <div class="faq-body"><p>It depends on your website’s current condition, competition, authority, and scope of work. Some technical and on-page improvements can create early movement, while sustainable organic growth typically builds over several months.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How do you measure success?</summary>
+          <div class="faq-body"><p>We define KPIs around your business goals. These may include search and AI visibility, rankings, qualified organic traffic, engagement, demo requests, product signups, conversion rates, and organic-attributed revenue.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you use AI to create content?</summary>
+          <div class="faq-body"><p>AI may support research, ideation, analysis, and parts of the workflow, but it doesn’t replace product understanding, original thinking, editing, or quality control. Every deliverable is reviewed before it reaches your audience.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you guarantee rankings or a specific amount of traffic?</summary>
+          <div class="faq-body"><p>No responsible SEO professional can guarantee a particular ranking or traffic number. What we can promise is a thoughtful strategy, quality-first execution, transparent reporting, and continuous improvement based on performance.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How are projects priced?</summary>
+          <div class="faq-body"><p>Pricing depends on your goals, website, competition, required channels, and level of execution. After the initial conversation, you’ll receive a recommended scope with clear deliverables and pricing.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I hire you through Fiverr or Upwork?</summary>
+          <div class="faq-body"><p>Yes. If you prefer working through an established freelance platform, you can hire me through Fiverr or Upwork. You can also work with us directly through DevMark Lab.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Will our product and performance data remain confidential?</summary>
+          <div class="faq-body"><p>Yes. Client information, website access, strategy documents, and performance data are treated as confidential. Public case studies can also be anonymized when the client’s identity or commercial information cannot be disclosed.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final">
+    <div class="final-glow" aria-hidden="true"></div>
+    <div class="wrap final-inner reveal">
+      <h2 class="final-title">Investing in SEO — but not seeing enough <span class="grad">traffic or signups?</span></h2>
+      <p class="final-text">
+        More content and disconnected fixes won’t solve the problem. You need someone to understand
+        your product, identify what’s blocking growth, and lead the right work from strategy
+        through execution.
+      </p>
+      <div class="final-actions">
+        <a href="https://cal.com/neha-jangid-fucuhx" target="_blank" rel="noopener" class="btn btn-accent btn-lg">
+          Book your free 30-minute consultation
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="#contact-question" class="btn btn-ghost btn-lg">
+          Tell me what’s not working
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <p class="final-kicker">Let’s turn organic effort into visibility, ICP traffic, and qualified signups.</p>
+
+      <div class="social-row">
+        <a href="https://www.linkedin.com/in/neha-jangid123/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.3 8.75 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.32-2.05-3.32-2.05 0-2.37 1.58-2.37 3.21V21H9z"></path></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://www.upwork.com/freelancers/nehajangid?mp_source=share" target="_blank" rel="noopener" class="social-btn" aria-label="Upwork">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.6 6.9c-1.94 0-3.44 1.25-4.06 3.3-.94-1.4-1.66-3.08-2.08-4.5H9.9v5.42c0 1.07-.87 1.95-1.95 1.95a1.95 1.95 0 0 1-1.95-1.95V5.7H3.4v5.42a4.51 4.51 0 0 0 4.55 4.55c2.52 0 4.55-2.05 4.55-4.55v-.9c.4.83.9 1.68 1.5 2.43l-1.28 6.04h2.62l.92-4.37c.81.52 1.74.83 2.77.83a4.63 4.63 0 0 0 4.62-4.65c0-2.58-2.07-4.6-4.62-4.6zm0 6.67c-.78 0-1.52-.33-2.19-.87l.2-.8v-.02c.14-.83.6-2.23 1.99-2.23a2.04 2.04 0 0 1 2.03 2.05c0 1.14-.9 2.07-2.03 2.07z"></path></svg>
+          <span>Upwork</span>
+        </a>
+        <a href="https://www.fiverr.com/neha9001/" target="_blank" rel="noopener" class="social-btn" aria-label="Fiverr">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.3 8.2v-.6c0-1.1.9-2 2-2h1.4V2.4h-1.7a5 5 0 0 0-5 5v.8H9.6v-.6c0-1.1.9-2 2-2H12V2.4h-.7a5 5 0 0 0-5 5v.8H4.3v3.1h2v10.3h3.3V11.3H13v10.3h3.3V11.3h3.4V8.2z"></path></svg>
+          <span>Fiverr</span>
         </a>
       </div>
     </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> Neha Jangid · Co-founder,
+      <a href="https://devmarklab.com/" target="_blank" rel="noopener">DevMark Lab</a>
+    </p>
+    <p class="footer-links">
+      <a href="https://www.linkedin.com/in/neha-jangid123/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.upwork.com/freelancers/nehajangid?mp_source=share" target="_blank" rel="noopener">Upwork</a>
+      <a href="https://www.fiverr.com/neha9001/" target="_blank" rel="noopener">Fiverr</a>
+      <a href="https://devmarklab.com/" target="_blank" rel="noopener">DevMark Lab</a>
+    </p>
   </div>
+</footer>
 
-  <!-- Lightbox -->
-  <div class="work-lightbox" id="workLightbox" onclick="handleLightboxBackdropClick(event)">
-    <button class="work-lightbox-close" onclick="closeLightbox()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-    <div class="work-lightbox-counter" id="lightboxCounter">1 / 3</div>
-    <div class="work-lightbox-image-container" id="lightboxImageContainer">
-      <img class="work-lightbox-image" id="lightboxImage" src="" alt="" ondblclick="handleLightboxDoubleTap()">
-      <video class="work-lightbox-image" id="lightboxVideo" src="" autoplay loop muted playsinline ondblclick="handleLightboxDoubleTap()" style="display: none;"></video>
-    </div>
-    <p class="work-lightbox-hint" id="lightboxHint">Pinch to zoom • Swipe to navigate</p>
-    <button class="work-lightbox-nav work-lightbox-prev" onclick="prevLightboxImage()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="15 18 9 12 15 6"></polyline>
-      </svg>
-    </button>
-    <button class="work-lightbox-nav work-lightbox-next" onclick="nextLightboxImage()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-    </button>
-  </div>
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+</button>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="12" y1="19" x2="12" y2="5"></line>
-      <polyline points="5 12 12 5 19 12"></polyline>
-    </svg>
-  </button>
-
-  <script src="script.js"></script>
-  <script src="minigames.js"></script>
+<script src="neha.js"></script>
 </body>
 </html>
