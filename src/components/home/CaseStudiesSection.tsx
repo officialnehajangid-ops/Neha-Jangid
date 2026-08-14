@@ -42,6 +42,11 @@ export function CaseStudiesSection() {
                   height={caseStudy.card.image.height}
                   sizes={CARD_IMAGE_SIZES}
                   loading="lazy"
+                  // next/image must emit width/height attributes, which would
+                  // otherwise pin the height and cancel the stylesheet's
+                  // `aspect-ratio: 16 / 8`. Releasing the height hands sizing
+                  // back to the CSS, as in the original markup.
+                  style={{ height: 'auto' }}
                 />
                 <span className="work-card-arrow">
                   <ArrowUpRightIcon />

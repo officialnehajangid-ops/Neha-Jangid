@@ -17,12 +17,20 @@ export const SITE = {
   socialDescription:
     'Organic growth for SaaS — search, AI visibility, content, video, digital PR and communities, tied to signups and revenue.',
   locale: 'en_US',
-  /** Doubles as the Open Graph / Twitter card image. */
+  /**
+   * Doubles as the Open Graph / Twitter card image.
+   *
+   * These are the portrait's *declared layout* dimensions, not the source file's
+   * intrinsic 1202x1126. The stylesheet sets `width: 100%` but never `height`, so
+   * the height attribute is what actually sizes the frame — `object-fit: cover`
+   * then crops the photo into it. Changing these numbers changes how tall the
+   * hero portrait renders.
+   */
   portrait: {
     src: '/images/neha.png',
     alt: 'Neha Jangid',
-    width: 1202,
-    height: 1126,
+    width: 600,
+    height: 620,
   },
 } as const;
 

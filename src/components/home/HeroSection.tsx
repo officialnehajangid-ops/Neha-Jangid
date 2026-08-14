@@ -4,8 +4,13 @@ import { ArrowRightIcon } from '@/components/ui/icons';
 import { EXTERNAL_LINK_PROPS, EXTERNAL_LINKS, HOME_SECTION_IDS, SITE } from '@/content/site';
 import { createRevealDelayStyle, REVEAL_CLASS_NAME } from '@/lib/reveal';
 
-/** The portrait never renders wider than 400px, so one size hint covers every breakpoint. */
-const PORTRAIT_SIZES = '400px';
+/**
+ * The portrait column is at most 400px wide, but the frame is a fixed 620px tall
+ * and the photo is cropped into it with `object-fit: cover` — so the browser
+ * actually paints roughly 620 x (1202/1126) ≈ 662px of image width. Asking for
+ * 700px keeps it sharp at 1x instead of upscaling a 640px source.
+ */
+const PORTRAIT_SIZES = '700px';
 
 export function HeroSection() {
   return (

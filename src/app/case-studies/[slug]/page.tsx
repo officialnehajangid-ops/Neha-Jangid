@@ -161,6 +161,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 height={screenshot.height}
                 sizes={SCREENSHOT_SIZES}
                 loading="lazy"
+                style={{ height: 'auto' }}
               />
             </div>
             <figcaption className="cs-gsc-line">{caseStudy.searchConsole.caption}</figcaption>
