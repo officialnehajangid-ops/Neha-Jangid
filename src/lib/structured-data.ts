@@ -10,7 +10,7 @@ import { EXTERNAL_LINKS, SITE, SITE_URL } from '@/content/site';
 /**
  * schema.org JSON-LD builders.
  *
- * These describe content that is already on the page — they never introduce
+ * These describe content that is already on the page - they never introduce
  * claims the visitor cannot see, which is what keeps the markup eligible for
  * rich results rather than flagged as spam.
  */

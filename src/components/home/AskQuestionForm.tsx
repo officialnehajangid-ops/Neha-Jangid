@@ -29,7 +29,7 @@ const HINT_NOTE: FormNote = { text: ASK_QUESTION_MESSAGES.hint, tone: null };
  * that no inbox is configured yet, preserving the behaviour the static site had.
  */
 function openMailClientWith(submission: AskQuestionSubmission): void {
-  const subject = encodeURIComponent(`Organic growth question — ${submission.website}`);
+  const subject = encodeURIComponent(`Organic growth question - ${submission.website}`);
   const body = encodeURIComponent(
     `Website: ${submission.website}\nEmail: ${submission.email}\n\nQuestion:\n${submission.question}\n`,
   );
@@ -70,7 +70,7 @@ export function AskQuestionForm() {
       if (response.ok) {
         setValues(createEmptyAskQuestionSubmission());
         setNote({
-          text: `Thank you — your question is in. I’ll personally reply to ${submission.email}.`,
+          text: `Thank you - your question is in. I’ll personally reply to ${submission.email}.`,
           tone: 'ok',
         });
         return;

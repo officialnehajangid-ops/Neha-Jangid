@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
  * one currently sits in the middle band of the viewport, so the matching nav link
  * can be underlined.
  *
- * Returns null when none of the sections exist on the current page — which is the
+ * Returns null when none of the sections exist on the current page - which is the
  * case on every page except the home page.
  */
 export function useActiveSectionId(sectionIds: readonly string[]): string | null {

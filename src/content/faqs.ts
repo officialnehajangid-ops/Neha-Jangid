@@ -14,7 +14,7 @@ export const FREQUENTLY_ASKED_QUESTIONS: readonly FrequentlyAskedQuestion[] = [
   {
     question: 'What types of companies do you work with?',
     answerParagraphs: [
-      'We work primarily with B2B SaaS companies, API-first products, developer tools, and technical software businesses — from early-stage startups to established products looking to strengthen or scale organic acquisition.',
+      'We work primarily with B2B SaaS companies, API-first products, developer tools, and technical software businesses - from early-stage startups to established products looking to strengthen or scale organic acquisition.',
     ],
   },
   {
@@ -51,7 +51,7 @@ export const FREQUENTLY_ASKED_QUESTIONS: readonly FrequentlyAskedQuestion[] = [
     question: 'Our niche has low search volume. Can organic marketing still work?',
     answerParagraphs: [
       'Yes. SaaS and API products often serve specific audiences whose demand is spread across problems, use cases, integrations, comparisons, documentation, and highly technical searches.',
-      'These searches may have lower volume, but they can carry much stronger buying intent. We evaluate the complete search journey, competition, ICP relevance, and conversion potential — not keyword volume alone.',
+      'These searches may have lower volume, but they can carry much stronger buying intent. We evaluate the complete search journey, competition, ICP relevance, and conversion potential - not keyword volume alone.',
     ],
   },
   {

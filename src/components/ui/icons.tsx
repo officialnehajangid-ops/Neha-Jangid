@@ -131,6 +131,16 @@ export function GlobeIcon({ size = 22, className }: IconProps) {
   );
 }
 
+/** Rising trend line, used by the services summary banner and the process rail. */
+export function TrendUpIcon({ size = 20, className }: IconProps) {
+  return (
+    <StrokeIcon size={size} className={className} strokeWidth={1.8}>
+      <polyline points="3 16.5 9 10.5 13 14.5 21 6.5" />
+      <polyline points="15 6.5 21 6.5 21 12.5" />
+    </StrokeIcon>
+  );
+}
+
 /* ---------- Contact options ---------- */
 
 export function CalendarCheckIcon({ size = 22, className }: IconProps) {

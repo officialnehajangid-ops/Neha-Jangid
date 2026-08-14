@@ -1,20 +1,29 @@
 import { Fragment } from 'react';
 
-import { CLIENT_NAMES } from '@/content/clients';
+import { CLIENTS } from '@/content/clients';
 import { REVEAL_CLASS_NAME } from '@/lib/reveal';
 
 /**
  * The track holds the same list twice and slides by exactly -50%, which is what
- * makes the scroll loop seamlessly. The duplicate is hidden from assistive tech.
+ * makes the scroll loop seamlessly. The duplicate is hidden from assistive tech,
+ * and its links are taken out of the tab order so each brand is focusable once.
  */
 function ClientNameGroup({ isDuplicate = false }: { isDuplicate?: boolean }) {
   return (
     <div className="marquee-group" aria-hidden={isDuplicate || undefined}>
-      {CLIENT_NAMES.map((clientName) => (
+      {CLIENTS.map((client) => (
         // The name and its trailing dot are siblings: `.marquee-group` is a flex
         // row, and the <i> dot relies on being a flex item for its own spacing.
-        <Fragment key={clientName}>
-          <span>{clientName}</span>
+        <Fragment key={client.name}>
+          <a
+            className="marquee-link"
+            href={client.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            tabIndex={isDuplicate ? -1 : undefined}
+          >
+            {client.name}
+          </a>
           <i />
         </Fragment>
       ))}

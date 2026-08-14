@@ -15,14 +15,14 @@ export const SITE = {
   description:
     'I help SaaS companies increase visibility, traffic, and signups. 5+ years of SEO and content experience across 30+ SaaS products. Co-founder of DevMark Lab.',
   socialDescription:
-    'Organic growth for SaaS — search, AI visibility, content, video, digital PR and communities, tied to signups and revenue.',
+    'Organic growth for SaaS - search, AI visibility, content, video, digital PR and communities, tied to signups and revenue.',
   locale: 'en_US',
   /**
    * Doubles as the Open Graph / Twitter card image.
    *
    * These are the portrait's *declared layout* dimensions, not the source file's
    * intrinsic 1202x1126. The stylesheet sets `width: 100%` but never `height`, so
-   * the height attribute is what actually sizes the frame — `object-fit: cover`
+   * the height attribute is what actually sizes the frame - `object-fit: cover`
    * then crops the photo into it. Changing these numbers changes how tall the
    * hero portrait renders.
    */

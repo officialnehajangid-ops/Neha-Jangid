@@ -39,7 +39,7 @@ export function SiteHeader() {
           <Link
             href={isOnHomePage ? `#${HOME_SECTION_IDS.top}` : '/'}
             className="brand"
-            aria-label="Neha Jangid — home"
+            aria-label="Neha Jangid - home"
           >
             NJ<span className="brand-dot">.</span>
           </Link>

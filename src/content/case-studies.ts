@@ -99,7 +99,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
       {
         heading: 'The situation',
         paragraphs: [
-          'This SaaS product operated in a specialized market with relatively low keyword volume. The company had been investing in SEO for a long time — publishing content, optimizing keywords, and redesigning important pages.',
+          'This SaaS product operated in a specialized market with relatively low keyword volume. The company had been investing in SEO for a long time - publishing content, optimizing keywords, and redesigning important pages.',
           'There was plenty of activity, but organic traffic wasn’t growing consistently. The work appeared effective individually, yet it wasn’t creating sustained momentum or bringing enough of the right prospects into the conversion journey.',
         ],
       },
@@ -176,7 +176,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     confidentialityNote:
       'Client identity, website details, and commercially sensitive information have been withheld for confidentiality. The GSC totals shown cover the complete 16-month view; the engagement began in March 2026. Percentage-based outcomes reflect internal performance estimates.',
     metadata: {
-      title: 'Case Study 01 — Breaking a Long SEO Plateau | Neha Jangid',
+      title: 'Case Study 01 - Breaking a Long SEO Plateau | Neha Jangid',
       description:
         'How a niche SaaS product with low keyword volume moved past a long SEO plateau to consistent organic growth in five months.',
       socialTitle: 'Breaking a Long SEO Plateau and Rebuilding Organic Growth',
@@ -264,7 +264,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
         paragraphs: [
           'Over the six-month GSC view, the website generated 218K organic clicks and 9.85M search impressions, with an average search position of 8.2.',
           'Daily clicks grew from a few hundred early in the period to regularly exceeding 2,000 as the website captured more of the available search demand.',
-          'The result was a more complete organic presence — one that could attract buyers across discovery, consideration, and decision-stage searches.',
+          'The result was a more complete organic presence - one that could attract buyers across discovery, consideration, and decision-stage searches.',
         ],
       },
     ],
@@ -294,12 +294,12 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     confidentialityNote:
       'Client identity, website details, and commercially sensitive information have been withheld for confidentiality. Search figures are based on the six-month Google Search Console view shown. Percentage-based commercial and AI-visibility outcomes reflect internal performance estimates.',
     metadata: {
-      title: 'Case Study 02 — Structuring Scaled AI Content | Neha Jangid',
+      title: 'Case Study 02 - Structuring Scaled AI Content | Neha Jangid',
       description:
         'How a SaaS product with healthy search demand turned scaled AI content production into a structured organic growth engine over a year.',
       socialTitle: 'Turning Scaled AI Content Into a Structured Organic Growth Engine',
       socialDescription:
-        '218K organic clicks and 9.85M impressions — from publishing volume to relevance, quality and full buyer-journey coverage.',
+        '218K organic clicks and 9.85M impressions - from publishing volume to relevance, quality and full buyer-journey coverage.',
     },
   },
 ];

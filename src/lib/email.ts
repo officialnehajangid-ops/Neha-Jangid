@@ -53,7 +53,7 @@ function buildQuestionEmailBody(submission: AskQuestionSubmission): string {
 /**
  * Delivers one "ask a question" submission to the configured inbox.
  *
- * Uses Resend's REST API directly rather than its SDK — one fetch call keeps the
+ * Uses Resend's REST API directly rather than its SDK - one fetch call keeps the
  * dependency list short and makes the provider trivial to swap later.
  */
 export async function sendAskQuestionEmail(submission: AskQuestionSubmission): Promise<void> {
@@ -70,7 +70,7 @@ export async function sendAskQuestionEmail(submission: AskQuestionSubmission): P
       to: [inboxAddress],
       // So a reply from the inbox goes straight back to the visitor.
       reply_to: submission.email,
-      subject: `Organic growth question — ${submission.website}`,
+      subject: `Organic growth question - ${submission.website}`,
       text: buildQuestionEmailBody(submission),
     }),
   });

@@ -31,7 +31,7 @@ const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 export const ASK_QUESTION_MESSAGES = {
   hint: 'One question per submission. The more context you share, the more useful I can make my answer.',
   missingFields: 'Please fill in your website, your question, and your email address.',
-  invalidEmail: 'That email address doesn’t look right — mind checking it?',
+  invalidEmail: 'That email address doesn’t look right - mind checking it?',
   sending: 'Sending…',
 } as const;
 

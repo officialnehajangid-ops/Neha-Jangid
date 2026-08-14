@@ -1,5 +1,5 @@
 /* =========================================================
-   Neha Jangid — global stylesheet
+   Neha Jangid - global stylesheet
    Dark-first, light theme via [data-theme="light"].
 
    This is the site's single source of visual truth and is intentionally kept
@@ -468,16 +468,23 @@ button, input, textarea { font: inherit; color: inherit; }
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
 }
+/* The track holds the brand list twice and slides left by exactly one copy, so
+   the names scroll right to left and the loop is seamless. Deliberately not
+   disabled under `prefers-reduced-motion`: the continuous scroll is the point
+   of this section. Keyboard focus still stops it so links can be reached. */
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 42s linear infinite;
+  animation: marquee-scroll 34s linear infinite;
 }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-@keyframes marquee-scroll { to { transform: translateX(-50%); } }
+.marquee:focus-within .marquee-track { animation-play-state: paused; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
 
 .marquee-group { display: flex; align-items: center; }
-.marquee-group span {
+.marquee-link {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.7rem;
@@ -487,7 +494,14 @@ button, input, textarea { font: inherit; color: inherit; }
   opacity: .72;
   transition: opacity .25s var(--ease), color .25s var(--ease);
 }
-.marquee-group span:hover { opacity: 1; color: var(--text); }
+.marquee-link:hover { opacity: 1; color: var(--accent); }
+.marquee-link:focus-visible {
+  opacity: 1;
+  color: var(--accent);
+  outline: 2px solid var(--accent-line);
+  outline-offset: 6px;
+  border-radius: 6px;
+}
 .marquee-group i {
   display: block;
   flex: none;
@@ -505,41 +519,55 @@ button, input, textarea { font: inherit; color: inherit; }
   text-transform: uppercase;
   color: var(--text-faint);
 }
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
-  .marquee { overflow-x: auto; }
-}
 
 /* =========================================================
-   SERVICES — three pillars side by side
+   SERVICES - three tall pillar cards side by side
+
+   Each card is one container: pillar heading, description and the pillar's
+   own services stacked inside it, closed off by the summary banner below.
    ========================================================= */
 .sec-head-center { margin-left: auto; margin-right: auto; text-align: center; }
 .sec-head-center .eyebrow { justify-content: center; }
 .sec-head-center .sec-lede { margin-left: auto; margin-right: auto; }
 
-.pillars,
-.pillar-services {
+.pillars {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: stretch;
   gap: 20px;
 }
-/* Grid rows stretch, so all three pillar cards share one height. */
-.pillars { align-items: stretch; margin-bottom: 20px; }
+/* Grid rows stretch, so all three pillar cards end up the same height. */
 .pillars > div { display: flex; }
-.pillar-services { align-items: start; }
-.svc-stack { display: flex; flex-direction: column; gap: 14px; }
 
 .pillar-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 28px 26px 30px;
+  padding: 30px 26px 28px;
   border-radius: var(--r-lg);
   border: 1px solid var(--accent-line);
   background:
     radial-gradient(ellipse at 0% 0%, var(--accent-soft) 0%, transparent 62%),
     var(--surface);
   overflow: hidden;
+  transition: transform .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
 }
+/* A light sweep travels across the card on hover. */
+.pillar-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, var(--accent-soft) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform .85s var(--ease);
+  pointer-events: none;
+}
+.pillar-card:hover::before { transform: translateX(120%); }
+.pillar-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+.pillar-card:hover .pillar-icon { transform: scale(1.08) rotate(-4deg); }
+.pillar-card > * { position: relative; }
+
 .pillar-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
 .pillar-icon {
   display: grid; place-items: center;
@@ -580,111 +608,285 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .pillar-desc { margin-top: 14px; color: var(--text-dim); font-size: 1rem; }
 
-/* Cards drift up with a light sweep across them on hover. */
-.svc-card, .pillar-card {
-  transition: transform .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+/* The services list is divided off from the pillar heading above it. */
+.pillar-head { padding-bottom: 24px; border-bottom: 1px dashed var(--accent-line); }
+.pillar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
 }
-.svc-card {
+.svc-item {
   position: relative;
-  padding: 24px 22px 24px;
+  padding: 16px 18px 18px;
   border-radius: var(--r);
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: var(--surface-2);
   overflow: hidden;
+  transition: transform .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
 }
-.svc-card::before,
-.pillar-card::before {
+.svc-item::after {
   content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(115deg, transparent 30%, var(--accent-soft) 50%, transparent 70%);
-  transform: translateX(-120%);
-  transition: transform .85s var(--ease);
-  pointer-events: none;
-}
-.svc-card:hover::before,
-.pillar-card:hover::before { transform: translateX(120%); }
-.svc-card::after {
-  content: "";
-  position: absolute; inset: 0 0 auto 0;
-  height: 1px;
+  position: absolute; inset: 0 auto 0 0;
+  width: 2px;
   background: var(--grad);
   opacity: 0;
-  transition: opacity .35s var(--ease);
+  transition: opacity .3s var(--ease);
 }
-.svc-card:hover,
-.pillar-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
-.svc-card:hover { border-color: var(--line-strong); }
-.svc-card:hover::after { opacity: 1; }
-.pillar-card:hover .pillar-icon { transform: scale(1.08) rotate(-4deg); }
+.svc-item:hover { transform: translateX(4px); border-color: var(--accent-line); }
+.svc-item:hover::after { opacity: 1; }
 
 .svc-idx {
   font-family: var(--font-mono);
   font-size: .78rem;
   letter-spacing: .1em;
-  color: var(--text-faint);
+  color: var(--accent);
 }
-.svc-card h4 { font-size: 1.12rem; margin: 10px 0 9px; }
-.svc-card p { font-size: .98rem; color: var(--text-dim); line-height: 1.66; }
+.svc-item h4 { font-size: 1.06rem; margin: 8px 0 8px; }
+.svc-item p { font-size: .95rem; color: var(--text-dim); line-height: 1.62; }
 
-/* =========================================================
-   PROCESS RAIL
-   ========================================================= */
-.rail { position: relative; padding-left: 8px; }
-.rail::before {
+/* ---------- Summary banner: 01 + 02 + 03 = Growth ---------- */
+.equation {
+  position: relative;
+  margin-top: 20px;
+  padding: 46px 34px 42px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--accent-line);
+  background:
+    radial-gradient(ellipse at 50% 0%, var(--accent-soft) 0%, transparent 62%),
+    var(--surface);
+  text-align: center;
+}
+/* A short connector in the gap above ties the banner back to the three cards. */
+.equation::before {
   content: "";
   position: absolute;
-  left: 27px; top: 14px; bottom: 60px;
-  width: 1px;
-  background: linear-gradient(180deg,
-    var(--accent-line) 0%,
-    var(--line-strong) 45%,
-    var(--accent-line) 100%);
+  top: -21px; left: 50%;
+  width: 1px; height: 21px;
+  transform: translateX(-50%);
+  background: var(--accent-line);
 }
-.step {
-  position: relative;
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 26px;
-  padding-bottom: 26px;
+.eq-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 26px;
 }
-.step:last-child { padding-bottom: 0; }
+.eq-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--accent-line);
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: transform .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+}
+.eq-chip em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--accent);
+}
+.equation:hover .eq-chip { transform: translateY(-2px); color: var(--text); }
+.eq-op {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-faint);
+}
+.eq-eq { color: var(--accent); }
+.eq-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  background: var(--grad);
+  color: var(--accent-ink);
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px -12px var(--accent-line);
+}
+.eq-title { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.eq-sub {
+  margin: 16px auto 0;
+  max-width: 62ch;
+  color: var(--text-dim);
+  font-size: 1.05rem;
+}
 
-.step-node {
+/* =========================================================
+   PROCESS STEPPER
+
+   The whole seven-step journey sits in one view: a horizontal track of steps
+   across the top, and one panel below that expands whichever step is selected.
+   The track advances itself until hover, focus or a click hands over control.
+   ========================================================= */
+.section-process { padding: 96px 0; }
+.sec-head-tight { margin-bottom: 44px; }
+
+/* Two columns: every step readable in full on the left, the selected step
+   expanded on the right. `stretch` keeps both columns the same height. */
+.stepper {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  align-items: stretch;
+  gap: 24px;
+}
+
+/* ---------- Step list ---------- */
+.stepper-nav {
   position: relative;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 20px;
+  /* Never stretched: the rail below is sized against this list, so it has to
+     end where the last step does, not where the panel happens to end. */
+  align-self: start;
+}
+/* Base rail behind the progress fill, spanning the full list. */
+.stepper-nav::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--line-strong);
+}
+.stepper-progress {
+  position: absolute;
+  left: 0; top: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--grad);
+  transition: height .5s var(--ease);
+}
+
+.stepper-tab {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 11px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--r);
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background .3s var(--ease), border-color .3s var(--ease),
+              transform .3s var(--ease);
+}
+.stepper-num {
   display: grid; place-items: center;
-  width: 40px; height: 40px;
-  margin-left: 7px;
+  width: 32px; height: 32px;
   border-radius: 50%;
   border: 1px solid var(--line-strong);
   background: var(--bg-alt);
   font-family: var(--font-mono);
-  font-size: .8rem;
+  font-size: .74rem;
   color: var(--text-dim);
-  transition: border-color .35s var(--ease), color .35s var(--ease), box-shadow .35s var(--ease);
+  transition: border-color .3s var(--ease), color .3s var(--ease),
+              background .3s var(--ease), box-shadow .3s var(--ease);
 }
-.step.in .step-node { border-color: var(--accent-line); color: var(--accent); }
-.step-node.node-accent {
+.stepper-title {
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--text-dim);
+  transition: color .3s var(--ease);
+}
+
+.stepper-tab:hover { background: var(--surface-2); transform: translateX(3px); }
+.stepper-tab:hover .stepper-num { border-color: var(--accent-line); color: var(--accent); }
+.stepper-tab:hover .stepper-title { color: var(--text); }
+
+.stepper-tab.is-done .stepper-num { border-color: var(--accent-line); color: var(--accent); }
+
+.stepper-tab.is-active {
+  background: var(--surface);
+  border-color: var(--accent-line);
+  transform: none;
+}
+.stepper-tab.is-active .stepper-num {
   background: var(--grad);
   border-color: transparent;
   color: var(--accent-ink);
-  font-weight: 500;
-  box-shadow: 0 0 0 6px var(--accent-soft);
+  font-weight: 600;
+  box-shadow: 0 0 0 5px var(--accent-soft);
 }
-.step.in .step-node.node-accent { color: var(--accent-ink); }
+.stepper-tab.is-active .stepper-title {
+  color: var(--text);
+  font-weight: 600;
+  font-family: var(--font-display);
+  letter-spacing: -.01em;
+}
 
-.step-card {
-  padding: 22px 26px 24px;
-  border-radius: var(--r);
+.stepper-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- Panel ---------- */
+/* No min-height needed: the grid stretches this to match the step list, so the
+   panel never changes size as the steps advance. */
+.step-panel {
+  padding: 28px 32px 32px;
+  border-radius: var(--r-lg);
   border: 1px solid var(--line);
   background: var(--surface);
-  transition: border-color .3s var(--ease), transform .3s var(--ease);
+  transition: border-color .4s var(--ease), background .4s var(--ease);
 }
-.step-card:hover { border-color: var(--line-strong); transform: translateX(3px); }
-.step-card h3 { font-size: 1.22rem; }
-.step-card .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-.step-card .tags li {
+.step-panel:focus { outline: none; }
+.panel-accent {
+  border-color: var(--accent-line);
+  background:
+    radial-gradient(ellipse at 0% 0%, var(--accent-soft) 0%, transparent 58%),
+    var(--surface);
+}
+/* Remounted on every step change, so the entrance replays each time. */
+.step-panel-inner { animation: panel-in .45s var(--ease) both; }
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+.step-panel-num {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.step-panel-num span { color: var(--text-faint); }
+.step-panel-title { font-size: clamp(1.3rem, 2.4vw, 1.8rem); margin-top: 10px; }
+
+/* The payoff line for the step, called out above the deliverables. */
+.step-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 15px;
+  max-width: 80ch;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.step-benefit-icon { flex: none; margin-top: 4px; color: var(--accent); }
+
+.step-panel .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+/* The stagger is an animation, not a transition, so its per-chip delay never
+   lags the hover colours. `backwards` covers the wait before each chip lands. */
+.step-panel .tags li {
   font-family: var(--font-mono);
   font-size: .8rem;
   letter-spacing: .04em;
@@ -693,15 +895,17 @@ button, input, textarea { font: inherit; color: inherit; }
   border-radius: 7px;
   background: var(--surface-2);
   border: 1px solid var(--line);
+  animation: chip-in .45s var(--ease) backwards;
+  animation-delay: var(--d, 0s);
+  transition: color .25s var(--ease), border-color .25s var(--ease);
+}
+.step-panel .tags li:hover { color: var(--accent); border-color: var(--accent-line); }
+@keyframes chip-in {
+  from { opacity: 0; transform: translateY(7px); }
+  to   { opacity: 1; transform: none; }
 }
 
-.card-accent {
-  border-color: var(--accent-line);
-  background:
-    linear-gradient(120deg, var(--accent-soft) 0%, transparent 55%),
-    var(--surface);
-}
-.chain { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 16px; }
+.chain { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
 .chain-item {
   display: inline-flex; align-items: baseline; gap: 6px;
   padding: 7px 14px;
@@ -710,7 +914,11 @@ button, input, textarea { font: inherit; color: inherit; }
   background: var(--accent-soft);
   font-size: .92rem;
   font-weight: 500;
+  animation: chip-in .45s var(--ease) backwards;
+  animation-delay: var(--d, 0s);
+  transition: transform .25s var(--ease), border-color .25s var(--ease);
 }
+.chain-item:hover { transform: translateY(-2px); border-color: var(--accent); }
 .chain-item i { font-style: normal; color: var(--accent); font-weight: 600; }
 .chain-arrow {
   width: 16px; height: 1px;
@@ -726,7 +934,7 @@ button, input, textarea { font: inherit; color: inherit; }
 
 .loop {
   display: flex; flex-wrap: wrap; align-items: center; gap: 9px;
-  margin-top: 18px;
+  margin-top: 20px;
   padding-top: 16px;
   border-top: 1px dashed var(--line-strong);
   font-family: var(--font-mono);
@@ -735,8 +943,22 @@ button, input, textarea { font: inherit; color: inherit; }
   text-transform: uppercase;
   color: var(--text-dim);
 }
-.loop-icon { color: var(--accent); flex: none; }
+.loop-icon {
+  color: var(--accent);
+  flex: none;
+  transition: transform .7s var(--ease);
+}
+.step-panel:hover .loop-icon { transform: rotate(180deg); }
 .loop em { font-style: normal; color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .step-panel-inner,
+  .step-panel .tags li,
+  .chain-item { animation: none; }
+  .stepper-progress { transition: none; }
+  .stepper-tab:hover { transform: none; }
+  .step-panel:hover .loop-icon { transform: none; }
+}
 
 /* =========================================================
    TESTIMONIALS
@@ -1215,22 +1437,25 @@ button, input, textarea { font: inherit; color: inherit; }
   .section { padding: 88px 0; }
   .hero { padding: 132px 0 84px; }
   .sec-head { margin-bottom: 52px; }
-  .equation { padding: 44px 22px; margin-top: 68px; }
+  .equation { padding: 38px 22px 34px; }
+  .eq-row { gap: 9px; }
+  .eq-chip { padding: 8px 14px; font-size: .74rem; letter-spacing: .08em; }
   .quote-grid, .options, .work-grid { grid-template-columns: 1fr; }
   .video-grid { grid-template-columns: 1fr 1fr; }
   .impact-grid { grid-template-columns: 1fr 1fr; }
   .clients { padding: 72px 0 64px; }
-  .marquee-group span { font-size: 1.4rem; }
+  .marquee-link { font-size: 1.4rem; }
   .marquee-group i { margin: 0 24px; }
+
+  /* Not enough width for two columns: the list stacks above its panel. */
+  .stepper { grid-template-columns: 1fr; gap: 22px; }
+  .stepper-title { font-size: .98rem; }
 }
 
 @media (max-width: 620px) {
   .wrap { padding: 0 18px; }
   .hero-actions .btn { width: 100%; }
-  .step { grid-template-columns: 40px 1fr; gap: 16px; }
-  .step-node { width: 34px; height: 34px; margin-left: 3px; font-size: .68rem; }
-  .rail::before { left: 20px; }
-  .step-card { padding: 18px 18px 20px; }
+  .step-panel { padding: 22px 20px 24px; }
   .impact-grid { grid-template-columns: 1fr; }
   .faq-item summary { font-size: 1.05rem; padding-right: 34px; }
   .faq-body { padding-right: 10px; }

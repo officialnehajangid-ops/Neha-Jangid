@@ -20,7 +20,6 @@ export function FaqSection() {
     <section id={HOME_SECTION_IDS.faq} className="section section-alt">
       <div className="wrap">
         <header className={`sec-head ${REVEAL_CLASS_NAME}`}>
-          <p className="eyebrow">FAQs</p>
           <h2 className="sec-title">
             Questions SaaS founders usually ask <span className="grad">before we start</span>
           </h2>

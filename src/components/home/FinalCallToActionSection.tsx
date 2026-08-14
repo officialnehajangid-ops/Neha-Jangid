@@ -10,7 +10,7 @@ export function FinalCallToActionSection() {
 
       <div className={`wrap final-inner ${REVEAL_CLASS_NAME}`}>
         <h2 className="final-title">
-          Investing in SEO — but not seeing enough{' '}
+          Investing in SEO - but not seeing enough{' '}
           <span className="grad">traffic or signups?</span>
         </h2>
         <p className="final-text">

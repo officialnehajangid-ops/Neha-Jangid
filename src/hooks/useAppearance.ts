@@ -33,7 +33,7 @@ export type Appearance = {
  *
  * The DOM is already correct on first paint thanks to the bootstrap script, so
  * this hook only mirrors the stored values into state and takes over from the
- * first interaction onwards. Call it once, high in the tree — `SiteHeader` owns
+ * first interaction onwards. Call it once, high in the tree - `SiteHeader` owns
  * both controls, so both stay in sync without a context.
  */
 export function useAppearance(): Appearance {
@@ -42,7 +42,7 @@ export function useAppearance(): Appearance {
   /**
    * Visitors who have never shuffled keep the stylesheet's own accent tokens, which
    * are hand-tuned per theme. Only once they have picked a scheme do we override
-   * those tokens — and re-mix them whenever the theme flips.
+   * those tokens - and re-mix them whenever the theme flips.
    */
   const [hasChosenAccentScheme, setHasChosenAccentScheme] = useState(false);
 

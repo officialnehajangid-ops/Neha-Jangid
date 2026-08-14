@@ -61,7 +61,7 @@ export function ContactSection() {
           </h2>
           <p className="sec-lede">
             Whether you need a complete organic growth strategy, support with a specific project, or
-            an expert answer to one question — choose the option that works best for you.
+            an expert answer to one question - choose the option that works best for you.
           </p>
         </header>
 
@@ -78,7 +78,7 @@ export function ContactSection() {
               performance, and what may be limiting your visibility, traffic, or signups.
             </p>
             <p className="option-text">
-              You’ll leave with a clearer understanding of what deserves attention next — and
+              You’ll leave with a clearer understanding of what deserves attention next - and
               whether we’re the right team to help you execute it.
             </p>
             <a

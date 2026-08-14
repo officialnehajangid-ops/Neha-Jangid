@@ -8,7 +8,7 @@ const FOOTER_LINKS = [
 
 export function SiteFooter() {
   // Resolved when the page is rendered, which for these static pages means at
-  // build time — so a yearly redeploy keeps the notice current.
+  // build time - so a yearly redeploy keeps the notice current.
   const currentYear = new Date().getFullYear();
 
   return (

@@ -34,7 +34,7 @@ export function VideoTestimonialCard({ testimonial }: { testimonial: VideoTestim
         />
       ) : (
         <>
-          {/* Served straight from YouTube's CDN — routing it through the image
+          {/* Served straight from YouTube's CDN - routing it through the image
               optimizer would add a hop for an asset that is thrown away on click. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={buildYouTubeThumbnailUrl(testimonial.youTubeVideoId)} alt="" loading="lazy" />

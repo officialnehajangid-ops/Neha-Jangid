@@ -1,5 +1,5 @@
 export type VideoTestimonial = {
-  /** YouTube video id — the player is only loaded once the facade is clicked. */
+  /** YouTube video id - the player is only loaded once the facade is clicked. */
   readonly youTubeVideoId: string;
   /** Used for the button's accessible name. */
   readonly position: number;

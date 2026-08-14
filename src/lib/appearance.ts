@@ -1,8 +1,8 @@
 /**
  * Appearance = the visitor's two personalisation choices:
  *
- *   1. `colorTheme`    — dark (brand default) or light, stored as `data-theme` on <html>.
- *   2. `accentScheme`  — which hue pair repaints every accent on the page: buttons,
+ *   1. `colorTheme`    - dark (brand default) or light, stored as `data-theme` on <html>.
+ *   2. `accentScheme`  - which hue pair repaints every accent on the page: buttons,
  *                        gradients, glows, rails, links, numbers.
  *
  * Both are persisted in localStorage and re-applied before the first paint by the
@@ -57,7 +57,7 @@ const STORAGE_KEYS = {
  * Turns a scheme into the exact CSS custom properties the stylesheet expects.
  *
  * IMPORTANT: this function is serialised with `Function.prototype.toString()` into
- * the pre-hydration bootstrap script, so it must stay **self-contained** — it may
+ * the pre-hydration bootstrap script, so it must stay **self-contained** - it may
  * only reference its own parameters, locals and JavaScript built-ins. Reaching for
  * anything in module scope would throw once inlined into the <head>.
  */

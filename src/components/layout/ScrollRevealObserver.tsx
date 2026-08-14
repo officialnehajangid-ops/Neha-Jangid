@@ -10,7 +10,7 @@ const REVEALED_CLASS_NAME = 'in';
 /**
  * Fades every `.reveal` element in the first time it scrolls into view.
  *
- * One observer for the whole page keeps the markup free of wrapper elements —
+ * One observer for the whole page keeps the markup free of wrapper elements -
  * important here, because reveal targets include grid and flex children whose
  * layout an extra <div> would break. Mounted once in the root layout and rebuilt
  * on navigation, since each route brings its own set of reveal targets.
