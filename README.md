@@ -110,3 +110,4 @@ whenever the form cannot deliver, so it should be replaced with a real address.
 - Images go through `next/image` (AVIF/WebP, correct intrinsic sizes).
 - The old `/index.html`, `/case-study-01.html` and `/case-study-02.html` URLs
   redirect permanently to their new routes — see `next.config.ts`.
+
