@@ -735,6 +735,37 @@ button, input, textarea { font: inherit; color: inherit; }
 .section-process { padding: 96px 0; }
 .sec-head-tight { margin-bottom: 44px; }
 
+/* ---------- Pinned scroll ----------
+   Wide, tall viewports only: the section grows one viewport plus a band of
+   scroll per step, and the pane inside sticks to the top. Scrolling through
+   those bands walks the steps with the pane parked on screen; past the last
+   band it unpins and the page carries on. Anywhere smaller the pane could not
+   fit on one screen, so the section stays an ordinary block and the stepper
+   advances itself instead. Keep the query in step with PINNED_MEDIA_QUERY. */
+@media (min-width: 861px) and (min-height: 700px) {
+  .section-process { padding: 0; }
+  .process-track {
+    --step-scroll: 62vh;
+    height: calc(100vh + var(--step-scroll) * var(--step-count, 7));
+  }
+  .process-sticky {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* `safe` keeps the top reachable if the pane ever outgrows the viewport. */
+    justify-content: center;
+    justify-content: safe center;
+    padding: 84px 0 64px;
+  }
+  /* Tightened so the header and all seven steps clear a 700px viewport. */
+  .section-process .sec-title { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
+  .section-process .sec-lede { font-size: 1.06rem; margin-top: 16px; }
+  .sec-head-tight { margin-bottom: 34px; }
+  .stepper-tab { padding: 9px 15px; }
+}
+
 /* Two columns: every step readable in full on the left, the selected step
    expanded on the right. `stretch` keeps both columns the same height. */
 .stepper {
@@ -836,8 +867,12 @@ button, input, textarea { font: inherit; color: inherit; }
 
 /* ---------- Panel ---------- */
 /* No min-height needed: the grid stretches this to match the step list, so the
-   panel never changes size as the steps advance. */
+   panel never changes size as the steps advance. Its contents are centred
+   because the shorter steps would otherwise leave the card visibly half empty. */
 .step-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 28px 32px 32px;
   border-radius: var(--r-lg);
   border: 1px solid var(--line);
