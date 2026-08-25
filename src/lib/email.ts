@@ -33,7 +33,10 @@ type EmailDeliveryConfig = {
 
 function readEmailDeliveryConfig(): EmailDeliveryConfig {
   const apiKey = process.env.RESEND_API_KEY;
-  const fromAddress = process.env.ASK_FORM_FROM_EMAIL;
+  const resendDomain = process.env.RESEND_EMAIL_DOMAIN?.trim();
+  const fromAddress =
+    process.env.ASK_FORM_FROM_EMAIL ||
+    (resendDomain ? `Neha Jangid Website <website@${resendDomain}>` : undefined);
   const inboxAddress = process.env.ASK_FORM_INBOX_EMAIL || CONTACT_EMAIL;
 
   if (!apiKey || !fromAddress) throw new EmailDeliveryNotConfiguredError();

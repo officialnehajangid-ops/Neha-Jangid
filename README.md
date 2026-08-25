@@ -88,6 +88,7 @@ See `.env.example`. Only `NEXT_PUBLIC_SITE_URL` matters for a plain deployment.
 | ----------------------- | -------------------------------------------------------- |
 | `NEXT_PUBLIC_SITE_URL`  | Canonical origin for canonical tags, OG tags and sitemap  |
 | `RESEND_API_KEY`        | Mail provider credential for `/api/ask`                   |
+| `RESEND_EMAIL_DOMAIN`   | Verified sender domain supplied by the Vercel integration |
 | `ASK_FORM_FROM_EMAIL`   | Verified sender address                                   |
 | `ASK_FORM_INBOX_EMAIL`  | Where question submissions are delivered                  |
 
