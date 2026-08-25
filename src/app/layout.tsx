@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono, Syne } from 'next/font/google';
 import type { ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 
 import { AppearanceBootstrapScript } from '@/components/layout/AppearanceBootstrapScript';
 import { BackToTopButton } from '@/components/layout/BackToTopButton';
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <BackToTopButton />
         <ScrollRevealObserver />
+        <Analytics />
       </body>
     </html>
   );
