@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   description: SITE.description,
   authors: [{ name: SITE.name }],
   creator: SITE.name,
+  verification: {
+    google: 'PA505s8cRP_1BmGbqYklEUVoiEjpWn82gMfAvuNrnyo',
+  },
   icons: { icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }] },
   openGraph: {
     type: 'website',
