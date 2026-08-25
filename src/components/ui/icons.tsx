@@ -101,6 +101,23 @@ export function MoonIcon({ size = 18, className }: IconProps) {
   );
 }
 
+export function MailIcon({ size = 18, className }: IconProps) {
+  return (
+    <StrokeIcon size={size} className={className} strokeWidth={1.8}>
+      <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+      <path d="m3.5 6 8.5 6.5L20.5 6" />
+    </StrokeIcon>
+  );
+}
+
+export function CloseIcon({ size = 18, className }: IconProps) {
+  return (
+    <StrokeIcon size={size} className={className} strokeWidth={1.8}>
+      <path d="M5 5l14 14M19 5 5 19" />
+    </StrokeIcon>
+  );
+}
+
 /* ---------- Service pillars ---------- */
 
 export function SearchInsightIcon({ size = 22, className }: IconProps) {

@@ -34,11 +34,8 @@ export const SITE = {
   },
 } as const;
 
-/**
- * TODO: replace with the inbox that should receive "Ask one question" submissions.
- * Shown to visitors whenever /api/ask cannot deliver their message.
- */
-export const CONTACT_EMAIL = 'hello@example.com';
+/** Public inbox shown in contact surfaces and used as the delivery fallback. */
+export const CONTACT_EMAIL = 'hello@nehajangid.com';
 
 export const EXTERNAL_LINKS = {
   bookACall: 'https://cal.com/neha-jangid-fucuhx',

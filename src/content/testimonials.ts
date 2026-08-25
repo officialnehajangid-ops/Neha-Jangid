@@ -45,5 +45,5 @@ export function buildYouTubeThumbnailUrl(youTubeVideoId: string): string {
 
 /** Privacy-preserving embed, only requested after the visitor presses play. */
 export function buildYouTubeEmbedUrl(youTubeVideoId: string): string {
-  return `https://www.youtube-nocookie.com/embed/${youTubeVideoId}?autoplay=1&rel=0`;
+  return `https://www.youtube-nocookie.com/embed/${youTubeVideoId}?autoplay=1&rel=0&playsinline=1`;
 }

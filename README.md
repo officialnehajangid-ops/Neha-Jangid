@@ -95,9 +95,9 @@ Until the mail variables are set, `/api/ask` answers `503` with
 `email_delivery_not_configured` and the form falls back to opening the visitor's
 mail client — the behaviour the static site had.
 
-**Still to fill in:** `CONTACT_EMAIL` in `src/content/site.ts` is the placeholder
-`hello@example.com` carried over from the original code. It is shown to visitors
-whenever the form cannot deliver, so it should be replaced with a real address.
+The public contact address is `hello@nehajangid.com`. Both contact forms use the
+configured Resend inbox when available and fall back to opening the visitor's
+email app with a pre-addressed message.
 
 ## SEO
 
@@ -110,4 +110,3 @@ whenever the form cannot deliver, so it should be replaced with a real address.
 - Images go through `next/image` (AVIF/WebP, correct intrinsic sizes).
 - The old `/index.html`, `/case-study-01.html` and `/case-study-02.html` URLs
   redirect permanently to their new routes — see `next.config.ts`.
-

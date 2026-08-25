@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 import { AccentShuffleButton } from '@/components/layout/AccentShuffleButton';
 import { ColorThemeToggle } from '@/components/layout/ColorThemeToggle';
+import { EmailContactModal } from '@/components/layout/EmailContactModal';
 import { useActiveSectionId } from '@/hooks/useActiveSectionId';
 import { useAppearance } from '@/hooks/useAppearance';
 import { useHasScrolledPast } from '@/hooks/useHasScrolledPast';
@@ -28,6 +29,7 @@ export function SiteHeader() {
   const isStuck = useHasScrolledPast(STICKY_THRESHOLD_IN_PIXELS);
   const activeSectionId = useActiveSectionId(NAVIGATED_SECTION_IDS);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   const { toggleColorTheme, shuffleAccentScheme } = useAppearance();
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
@@ -57,6 +59,14 @@ export function SiteHeader() {
           </div>
 
           <div className="nav-actions">
+            <button
+              type="button"
+              className="btn btn-sm btn-ghost nav-email-cta"
+              onClick={() => setIsEmailModalOpen(true)}
+            >
+              Email Me
+            </button>
+
             <a
               href={EXTERNAL_LINKS.bookACall}
               {...EXTERNAL_LINK_PROPS}
@@ -92,6 +102,16 @@ export function SiteHeader() {
             {link.label}
           </Link>
         ))}
+        <button
+          type="button"
+          className="mm-email"
+          onClick={() => {
+            closeMobileMenu();
+            setIsEmailModalOpen(true);
+          }}
+        >
+          Email Me
+        </button>
         <a
           href={MOBILE_MENU_CTA.href}
           {...EXTERNAL_LINK_PROPS}
@@ -101,6 +121,8 @@ export function SiteHeader() {
           {MOBILE_MENU_CTA.label}
         </a>
       </div>
+
+      <EmailContactModal isOpen={isEmailModalOpen} onClose={() => setIsEmailModalOpen(false)} />
     </>
   );
 }

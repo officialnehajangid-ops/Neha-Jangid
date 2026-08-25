@@ -1,6 +1,8 @@
 import 'server-only';
 
+import { CONTACT_EMAIL } from '@/content/site';
 import type { AskQuestionSubmission } from '@/lib/ask-question';
+import type { ContactEmailSubmission } from '@/lib/contact-email';
 
 const RESEND_EMAILS_ENDPOINT = 'https://api.resend.com/emails';
 
@@ -32,9 +34,9 @@ type EmailDeliveryConfig = {
 function readEmailDeliveryConfig(): EmailDeliveryConfig {
   const apiKey = process.env.RESEND_API_KEY;
   const fromAddress = process.env.ASK_FORM_FROM_EMAIL;
-  const inboxAddress = process.env.ASK_FORM_INBOX_EMAIL;
+  const inboxAddress = process.env.ASK_FORM_INBOX_EMAIL || CONTACT_EMAIL;
 
-  if (!apiKey || !fromAddress || !inboxAddress) throw new EmailDeliveryNotConfiguredError();
+  if (!apiKey || !fromAddress) throw new EmailDeliveryNotConfiguredError();
 
   return { apiKey, fromAddress, inboxAddress };
 }
@@ -72,6 +74,37 @@ export async function sendAskQuestionEmail(submission: AskQuestionSubmission): P
       reply_to: submission.email,
       subject: `Organic growth question - ${submission.website}`,
       text: buildQuestionEmailBody(submission),
+    }),
+  });
+
+  if (!response.ok) {
+    throw new EmailDeliveryFailedError(`${response.status} ${response.statusText}`);
+  }
+}
+
+/** Delivers a message from the header email form to the same configured inbox. */
+export async function sendContactEmail(submission: ContactEmailSubmission): Promise<void> {
+  const { apiKey, fromAddress, inboxAddress } = readEmailDeliveryConfig();
+
+  const response = await fetch(RESEND_EMAILS_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: fromAddress,
+      to: [inboxAddress],
+      reply_to: submission.email,
+      subject: `Website enquiry - ${submission.subject}`,
+      text: [
+        `Name: ${submission.name}`,
+        `Email: ${submission.email}`,
+        '',
+        'Message:',
+        submission.message,
+        '',
+      ].join('\n'),
     }),
   });
 
