@@ -3,7 +3,7 @@ import { EXTERNAL_LINK_PROPS, EXTERNAL_LINKS, SITE } from '@/content/site';
 
 const FOOTER_LINKS = [
   ...SOCIAL_PROFILES.map(({ label, href }) => ({ label, href })),
-  { label: 'DevMark Lab', href: EXTERNAL_LINKS.devMarkLab },
+  { label: 'DevMarkLab', href: EXTERNAL_LINKS.devMarkLab },
 ];
 
 export function SiteFooter() {
@@ -17,7 +17,7 @@ export function SiteFooter() {
         <p>
           © {currentYear} {SITE.name} · Co-founder,{' '}
           <a href={EXTERNAL_LINKS.devMarkLab} {...EXTERNAL_LINK_PROPS}>
-            DevMark Lab
+            DevMarkLab
           </a>
         </p>
         <p className="footer-links">

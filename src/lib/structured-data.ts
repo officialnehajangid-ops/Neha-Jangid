@@ -35,7 +35,7 @@ export function buildPersonSchema(): JsonLdObject {
     image: toAbsoluteUrl(SITE.portrait.src),
     worksFor: {
       '@type': 'Organization',
-      name: 'DevMark Lab',
+      name: 'DevMarkLab',
       url: EXTERNAL_LINKS.devMarkLab,
     },
     sameAs: [...SOCIAL_PROFILES.map((profile) => profile.href), EXTERNAL_LINKS.devMarkLab],

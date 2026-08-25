@@ -68,7 +68,7 @@ export function HeroSection() {
           <div className="portrait-badge glass">
             <span className="dot" />
             <div>
-              <p className="pb-title">Co-founder, DevMark Lab</p>
+              <p className="pb-title">Co-founder, DevMarkLab</p>
               <p className="pb-sub">B2B SaaS organic growth</p>
             </div>
           </div>

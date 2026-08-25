@@ -13,7 +13,7 @@ export const SITE = {
   jobTitle: 'SaaS SEO & Organic Growth Consultant',
   title: 'Neha Jangid | SaaS SEO & Organic Growth',
   description:
-    'I help SaaS companies increase visibility, traffic, and signups. 5+ years of SEO and content experience across 30+ SaaS products. Co-founder of DevMark Lab.',
+    'I help SaaS companies increase visibility, traffic, and signups. 5+ years of SEO and content experience across 30+ SaaS products. Co-founder of DevMarkLab.',
   socialDescription:
     'Organic growth for SaaS - search, AI visibility, content, video, digital PR and communities, tied to signups and revenue.',
   locale: 'en_US',

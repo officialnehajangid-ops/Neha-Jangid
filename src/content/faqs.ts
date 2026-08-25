@@ -87,7 +87,7 @@ export const FREQUENTLY_ASKED_QUESTIONS: readonly FrequentlyAskedQuestion[] = [
   {
     question: 'Can I hire you through Fiverr or Upwork?',
     answerParagraphs: [
-      'Yes. If you prefer working through an established freelance platform, you can hire me through Fiverr or Upwork. You can also work with us directly through DevMark Lab.',
+      'Yes. If you prefer working through an established freelance platform, you can hire me through Fiverr or Upwork. You can also work with us directly through DevMarkLab.',
     ],
   },
   {
