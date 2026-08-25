@@ -12,7 +12,7 @@ export type WrittenTestimonial = {
 };
 
 export const VIDEO_TESTIMONIALS: readonly VideoTestimonial[] = [
-  { youTubeVideoId: 'FA9HyuKmG0I', position: 1 },
+  { youTubeVideoId: '4qgrBKYLwFM', position: 1 },
   { youTubeVideoId: 'fe6_FL-MdQ4', position: 2 },
   { youTubeVideoId: 'XYI_UWwjkto', position: 3 },
   { youTubeVideoId: '-RgG8pM4CGs', position: 4 },
