@@ -31,6 +31,12 @@ export const WRITTEN_TESTIMONIALS: readonly WrittenTestimonial[] = [
     authorName: 'Jonathan',
     authorRole: 'Co-founder, PostPeer',
   },
+  {
+    quote:
+      'She exceeded my expectations in every way. Communication was fast and clear throughout the project, and she was very responsive to feedback. The final result was high quality, well thought out, and delivered on time. It was a smooth and pleasant experience overall, and I’d be happy to work with her again.',
+    authorName: 'Jonathan Fishner',
+    authorRole: 'Co-Founder & CEO of ChartDB.io',
+  },
 ];
 
 export function buildYouTubeThumbnailUrl(youTubeVideoId: string): string {
