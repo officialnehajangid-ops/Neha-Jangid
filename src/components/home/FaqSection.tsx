@@ -43,44 +43,46 @@ export function FaqSection() {
           </p>
         </header>
 
-        <div id="faq-question-list" className={`faq ${REVEAL_CLASS_NAME}`}>
-          {visibleQuestions.map((faq, index) => {
-            const isOpen = openQuestionIndex === index;
+        <div className="faq-layout">
+          <div id="faq-question-list" className={`faq ${REVEAL_CLASS_NAME}`}>
+            {visibleQuestions.map((faq, index) => {
+              const isOpen = openQuestionIndex === index;
 
-            return (
-              <details key={faq.question} className="faq-item" open={isOpen}>
-                <summary
-                  onClick={(event) => {
-                    event.preventDefault();
-                    setOpenQuestionIndex(isOpen ? null : index);
-                  }}
-                >
-                  {faq.question}
-                </summary>
-                <div className="faq-body">
-                  {faq.answerParagraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-              </details>
-            );
-          })}
-        </div>
-
-        {FREQUENTLY_ASKED_QUESTIONS.length > INITIAL_QUESTION_COUNT && (
-          <div className="faq-toggle-row">
-            <button
-              type="button"
-              className="btn btn-ghost faq-toggle"
-              aria-expanded={showAllQuestions}
-              aria-controls="faq-question-list"
-              onClick={toggleQuestionList}
-            >
-              {showAllQuestions ? 'Show fewer questions' : 'View more questions'}
-              <ArrowUpIcon className="faq-toggle-icon" />
-            </button>
+              return (
+                <details key={faq.question} className="faq-item" open={isOpen}>
+                  <summary
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setOpenQuestionIndex(isOpen ? null : index);
+                    }}
+                  >
+                    {faq.question}
+                  </summary>
+                  <div className="faq-body">
+                    {faq.answerParagraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </details>
+              );
+            })}
           </div>
-        )}
+
+          {FREQUENTLY_ASKED_QUESTIONS.length > INITIAL_QUESTION_COUNT && (
+            <div className="faq-toggle-row">
+              <button
+                type="button"
+                className="btn btn-ghost faq-toggle"
+                aria-expanded={showAllQuestions}
+                aria-controls="faq-question-list"
+                onClick={toggleQuestionList}
+              >
+                {showAllQuestions ? 'Show fewer questions' : 'View more questions'}
+                <ArrowUpIcon className="faq-toggle-icon" />
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
