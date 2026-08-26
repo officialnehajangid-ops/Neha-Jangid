@@ -91,6 +91,8 @@ See `.env.example`. Only `NEXT_PUBLIC_SITE_URL` matters for a plain deployment.
 | `RESEND_EMAIL_DOMAIN`   | Verified sender domain supplied by the Vercel integration |
 | `ASK_FORM_FROM_EMAIL`   | Verified sender address                                   |
 | `ASK_FORM_INBOX_EMAIL`  | Where question submissions are delivered                  |
+| `BLOB_READ_WRITE_TOKEN` | Private storage credential for testimonial video uploads  |
+| `TESTIMONIAL_REVIEW_SECRET` | Signs private, expiring video-review links             |
 
 Until the mail variables are set, `/api/ask` answers `503` with
 `email_delivery_not_configured` and the form falls back to opening the visitor's
@@ -99,6 +101,11 @@ mail client — the behaviour the static site had.
 The public contact address is `hello@nehajangid.com`. Both contact forms use the
 configured Resend inbox when available and fall back to opening the visitor's
 email app with a pre-addressed message.
+
+Client testimonials are delivered to the same inbox for manual review. Written
+submissions are emailed directly. Uploaded videos are stored in a private Vercel
+Blob store and the email contains a signed review link that expires after 30 days;
+nothing is published automatically.
 
 ## SEO
 

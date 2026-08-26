@@ -1,4 +1,5 @@
 import { VideoTestimonialCard } from '@/components/home/VideoTestimonialCard';
+import { TestimonialSubmission } from '@/components/home/TestimonialSubmission';
 import { QuoteMarkIcon } from '@/components/ui/icons';
 import { HOME_SECTION_IDS } from '@/content/site';
 import { VIDEO_TESTIMONIALS, WRITTEN_TESTIMONIALS } from '@/content/testimonials';
@@ -36,6 +37,8 @@ export function TestimonialsSection() {
             </figure>
           ))}
         </div>
+
+        <TestimonialSubmission />
       </div>
     </section>
   );

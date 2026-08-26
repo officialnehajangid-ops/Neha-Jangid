@@ -118,6 +118,33 @@ export function CloseIcon({ size = 18, className }: IconProps) {
   );
 }
 
+export function UploadCloudIcon({ size = 20, className }: IconProps) {
+  return (
+    <StrokeIcon size={size} className={className} strokeWidth={1.8}>
+      <path d="M16 16l-4-4-4 4M12 12v9" />
+      <path d="M20.4 17.5A5 5 0 0 0 18 8.2 7 7 0 0 0 4.4 10.5 4.5 4.5 0 0 0 5.5 19H7" />
+    </StrokeIcon>
+  );
+}
+
+export function LinkIcon({ size = 19, className }: IconProps) {
+  return (
+    <StrokeIcon size={size} className={className} strokeWidth={1.8}>
+      <path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.15 1.15" />
+      <path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.15-1.15" />
+    </StrokeIcon>
+  );
+}
+
+export function CheckCircleIcon({ size = 20, className }: IconProps) {
+  return (
+    <StrokeIcon size={size} className={className} strokeWidth={1.8}>
+      <circle cx="12" cy="12" r="9.5" />
+      <path d="m7.8 12.2 2.8 2.8 5.8-6" />
+    </StrokeIcon>
+  );
+}
+
 /* ---------- Service pillars ---------- */
 
 export function SearchInsightIcon({ size = 22, className }: IconProps) {
