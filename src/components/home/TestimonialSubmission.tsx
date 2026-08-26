@@ -45,7 +45,7 @@ type FormNote = {
 };
 
 const DEFAULT_NOTE: FormNote = {
-  text: 'Nothing is published automatically. Neha reviews every submission first.',
+  text: 'Nothing is published automatically. I review every submission first.',
   tone: null,
 };
 
@@ -267,7 +267,7 @@ export function TestimonialSubmission() {
       }
 
       setIsComplete(true);
-      setNote({ text: 'Your testimonial is in Neha’s inbox.', tone: 'ok' });
+      setNote({ text: 'Your testimonial is in my inbox.', tone: 'ok' });
     } catch (error) {
       const isKnownMessage =
         error instanceof Error &&
@@ -295,11 +295,6 @@ export function TestimonialSubmission() {
             A few honest words can help another SaaS team feel confident about working together.
             Choose written or video - whatever feels easiest.
           </p>
-          <div className="testimonial-invite-notes" aria-label="Submission details">
-            <span>Written or video</span>
-            <span>About 2 minutes</span>
-            <span>Reviewed before publishing</span>
-          </div>
         </div>
         <button
           ref={openButtonRef}
@@ -336,10 +331,10 @@ export function TestimonialSubmission() {
                   <CheckCircleIcon size={30} />
                 </span>
                 <p className="eyebrow">Thank you</p>
-                <h2 id="testimonial-modal-title">It’s in Neha’s inbox</h2>
+                <h2 id="testimonial-modal-title">It’s in my inbox</h2>
                 <p>
-                  Your {values.kind} testimonial was sent successfully. Neha will review it and
-                  reach out before anything is published.
+                  Your {values.kind} testimonial was sent successfully. I’ll review it and reach
+                  out before anything is published.
                 </p>
                 <button type="button" className="btn btn-accent" onClick={closeModal}>
                   Done
@@ -541,8 +536,8 @@ export function TestimonialSubmission() {
                       onChange={(event) => updateField('consent', event.target.checked)}
                     />
                     <span>
-                      I’m happy for Neha to review this testimonial and, after approval, publish it
-                      on her website or marketing channels.
+                      I’m happy for you to review this testimonial and, with my approval, publish it
+                      on your website or marketing channels.
                     </span>
                   </label>
 
