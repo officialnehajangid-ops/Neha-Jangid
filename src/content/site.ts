@@ -5,7 +5,7 @@
 
 /** Canonical origin, no trailing slash. Overridable per environment. */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nehajangid.com'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.nehajangid.com'
 ).replace(/\/$/, '');
 
 export const SITE = {
