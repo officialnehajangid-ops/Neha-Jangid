@@ -45,7 +45,7 @@ type FormNote = {
 };
 
 const DEFAULT_NOTE: FormNote = {
-  text: 'Nothing is published automatically. I review every submission first.',
+  text: 'Your testimonial and contact details will be sent directly to my inbox.',
   tone: null,
 };
 
@@ -333,8 +333,8 @@ export function TestimonialSubmission() {
                 <p className="eyebrow">Thank you</p>
                 <h2 id="testimonial-modal-title">It’s in my inbox</h2>
                 <p>
-                  Your {values.kind} testimonial was sent successfully. I’ll review it and reach
-                  out before anything is published.
+                  Your {values.kind} testimonial was sent successfully. I’ll get back to you if I
+                  need anything else.
                 </p>
                 <button type="button" className="btn btn-accent" onClick={closeModal}>
                   Done
@@ -536,8 +536,8 @@ export function TestimonialSubmission() {
                       onChange={(event) => updateField('consent', event.target.checked)}
                     />
                     <span>
-                      I’m happy for you to review this testimonial and, with my approval, publish it
-                      on your website or marketing channels.
+                      I’m happy for you to publish this testimonial on your website or marketing
+                      channels.
                     </span>
                   </label>
 

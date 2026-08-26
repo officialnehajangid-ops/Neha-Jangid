@@ -42,7 +42,7 @@ export const TESTIMONIAL_SUBMISSION_MESSAGES = {
   reviewTooLong: 'Please keep your written testimonial under 4,000 characters.',
   missingVideo: 'Please choose a video or paste a shareable video link.',
   invalidVideoUrl: 'Please use a full, secure link that starts with https://.',
-  missingConsent: 'Please confirm that I may review and publish your testimonial.',
+  missingConsent: 'Please confirm that I may publish your testimonial.',
   unsupportedVideo: 'Please choose an MP4, MOV, M4V, or WebM video.',
   videoTooLarge: `Please keep the video under ${MAX_TESTIMONIAL_VIDEO_SIZE_LABEL}.`,
   uploading: 'Uploading your video…',
