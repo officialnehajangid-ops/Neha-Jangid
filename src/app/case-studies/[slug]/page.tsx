@@ -168,6 +168,30 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             <figcaption className="cs-gsc-line">{caseStudy.searchConsole.caption}</figcaption>
           </figure>
 
+          {caseStudy.searchConsole.additionalViews?.map((view) => (
+            <figure key={view.image.src} className={`cs-wide ${REVEAL_CLASS_NAME}`}>
+              <p className="cs-wide-label">{view.label}</p>
+              <div className="shot-frame">
+                <div className="shot-bar">
+                  <span />
+                  <span />
+                  <span />
+                  <p>Search Console · Performance</p>
+                </div>
+                <Image
+                  src={view.image.src}
+                  alt={view.image.alt}
+                  width={view.image.width}
+                  height={view.image.height}
+                  sizes={SCREENSHOT_SIZES}
+                  loading="lazy"
+                  style={{ height: 'auto' }}
+                />
+              </div>
+              <figcaption className="cs-gsc-line">{view.caption}</figcaption>
+            </figure>
+          ))}
+
           <div className="cs-col">
             <div className={`cs-takeaway ${REVEAL_CLASS_NAME}`}>
               <h2>{caseStudy.takeaway.heading}</h2>

@@ -52,6 +52,11 @@ export type CaseStudy = {
   readonly searchConsole: {
     readonly image: CaseStudyImage;
     readonly caption: string;
+    readonly additionalViews?: readonly {
+      readonly label: string;
+      readonly image: CaseStudyImage;
+      readonly caption: string;
+    }[];
   };
   readonly takeaway: {
     readonly heading: string;
@@ -421,6 +426,19 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
       },
       caption:
         '920 → 1.82K clicks · August 30–September 11 vs September 12–23 · ≈98% increase',
+      additionalViews: [
+        {
+          label: 'The wider three-month trend',
+          image: {
+            src: '/images/case-study-03-gsc.png',
+            alt: 'Google Search Console three-month performance showing 6.68K clicks, 272K impressions, a 2.5% click-through rate, and an average position of 10.9.',
+            width: 2184,
+            height: 1302,
+          },
+          caption:
+            'Three-month view · 6.68K clicks · 272K impressions · 2.5% average CTR · 10.9 average position',
+        },
+      ],
     },
     takeaway: {
       heading: 'The takeaway',
