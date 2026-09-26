@@ -302,6 +302,142 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
         '218K organic clicks and 9.85M impressions - from publishing volume to relevance, quality and full buyer-journey coverage.',
     },
   },
+  {
+    slug: 'rebuilding-niche-api-site-architecture',
+    number: '03',
+    card: {
+      metaItems: ['Case study 03', 'Niche API product', 'Under 7 weeks'],
+      title: 'Rebuilding a niche API website around the way buyers search',
+      summary:
+        'Months of SEO had not helped its conversion pages rank. I rebuilt the site around search intent, mapped every commercial keyword to the right destination, and rewrote the landing experience.',
+      headlineMetric: {
+        prefix: '≈',
+        value: '100%',
+        label: 'increase in average daily organic clicks',
+      },
+      image: {
+        src: '/images/case-study-03-gsc.png',
+        alt: 'Search Console performance for case study 03: 6.68K clicks and 272K impressions across a three-month view.',
+        width: 2184,
+        height: 1302,
+      },
+    },
+    eyebrow: 'Case study 03 · Niche API product',
+    title: {
+      lead: 'Rebuilding a niche API website around ',
+      accent: 'the way buyers search',
+    },
+    metaPills: ['Initial result window · under 7 weeks', 'No new backlinks or blog posts'],
+    sections: [
+      {
+        heading: 'The situation',
+        paragraphs: [
+          'This was a highly specialized API product in a market where search volume was low, but every relevant query carried strong buying intent.',
+          'The company had already invested months in SEO. Its conversion-focused landing pages existed, yet they were not earning meaningful visibility for the core searches that mattered to the business.',
+        ],
+      },
+      {
+        heading: 'The problem',
+        paragraphs: [
+          'The issue went deeper than copy or metadata. The website did not give search engines a clear enough picture of what the product covered, which page should rank for each intent, or how its capabilities related to one another.',
+          'Important commercial searches were either competing for the same destination or had no dedicated page at all. Strong conversion copy could not do its job if the right page was difficult to discover.',
+        ],
+      },
+      {
+        heading: 'What I audited',
+        paragraphs: [
+          'I started by connecting technical findings, search behavior, and the competitive landscape. The review covered:',
+        ],
+        bullets: [
+          'The page types Google preferred for every priority query',
+          'The URL structures and hierarchies used by ranking competitors',
+          'Search intent and SERP composition across core commercial terms',
+          'Existing pages with overlapping or unclear keyword targets',
+          'High-intent topics without a dedicated landing page',
+          'Technical and on-page issues weakening relevance',
+          'How clearly the product, capabilities, and use cases were communicated',
+        ],
+        closingParagraph:
+          'The audit made the central problem clear: the architecture had to be decided before individual pages could rank consistently.',
+      },
+      {
+        heading: 'The architecture strategy',
+        paragraphs: [
+          'I turned the research into a keyword-to-page map, giving every important query one clear destination within the website.',
+          'The new structure connected broad capability hubs to focused platform pages and commercial use-case pages. That created a logical path from a general need to the exact feature or application a buyer was searching for.',
+        ],
+        bullets: [
+          'Capability hubs organized the product around its core jobs',
+          'Platform-specific child pages captured precise integration intent',
+          'Use-case pages addressed the needs of distinct buyer groups',
+          'Every page received one primary keyword and a distinct purpose',
+          'Titles and descriptions were written for the page’s exact search intent',
+          'Parent-child relationships made the full product offering easier to understand',
+        ],
+        closingParagraph:
+          'Keyword optimization was not added after the pages were written. It shaped the architecture from the beginning.',
+      },
+      {
+        heading: 'What I changed',
+        paragraphs: [
+          'With the structure in place, I rebuilt the landing-page system around it. The work included:',
+        ],
+        bullets: [
+          'Fixing the technical and on-page issues uncovered during the audit',
+          'Rewriting existing commercial pages around their assigned intent',
+          'Creating new landing pages for previously uncovered opportunities',
+          'Separating overlapping targets to reduce keyword competition',
+          'Clarifying the messaging for each capability, platform, and use case',
+          'Strengthening the relationships between broader and more specific pages',
+        ],
+        closingParagraph:
+          'The result was not a collection of isolated landing pages. It was one connected search system built to support discovery and conversion.',
+      },
+      {
+        heading: 'The outcome',
+        paragraphs: [
+          'The work began on August 10. By September 26 - in under seven weeks - average daily organic clicks in the final two weeks shown were approximately double the two-week baseline immediately before the restructure.',
+          'The complete three-month Search Console view recorded 6.68K clicks, 272K impressions, a 2.5% average click-through rate, and an average position of 10.9.',
+          'No new blog posts or backlinks were added during this result window. The lift coincided with the architecture and landing-page rollout: clearer search intent, better page coverage, and messaging built for each destination.',
+          'The clearer structure also created a stronger foundation for AEO and GEO by making the product’s capabilities and page relationships easier for search and AI systems to interpret. These pages were still early in their lifecycle, with more room to mature.',
+        ],
+      },
+    ],
+    impactMetrics: [
+      { prefix: '≈', value: '100%', label: 'increase in average daily organic clicks' },
+      { value: '6.68K', label: 'clicks in the three-month GSC view' },
+      { value: '272K', label: 'impressions in the three-month GSC view' },
+      { value: '2.5%', label: 'average CTR across the view' },
+    ],
+    searchConsole: {
+      image: {
+        src: '/images/case-study-03-gsc.png',
+        alt: 'Google Search Console performance showing organic clicks rising after the August 10 architecture rollout, with 6.68K clicks, 272K impressions, 2.5% CTR, and an average position of 10.9 across the full three-month view.',
+        width: 2184,
+        height: 1302,
+      },
+      caption:
+        '6.68K clicks · 272K impressions · 2.5% average CTR · 10.9 average position',
+    },
+    takeaway: {
+      heading: 'The takeaway',
+      paragraphs: [
+        'For a niche product, SEO is not simply a volume game. When every relevant search matters, the website needs one clear intent, one appropriate destination, and a logical relationship between every important page.',
+        'Architecture determines whether strong copy can be discovered. Clear page purpose also gives search engines and AI answer systems a better foundation for understanding, retrieving, and citing the product.',
+      ],
+    },
+    contactCtaLabel: 'Plan a search-led site architecture',
+    confidentialityNote:
+      'Client identity, website details, and commercially sensitive information have been withheld for confidentiality. The Search Console totals cover the complete three-month view and include both pre- and post-rollout data. The approximate 100% lift compares average daily clicks in the final 14 days shown with the 14 days immediately before work began on August 10; it is estimated from the chart. No new blog posts or backlinks were added during the result window.',
+    metadata: {
+      title: 'Case Study 03 - Rebuilding a Niche API Site Architecture | Neha Jangid',
+      description:
+        'How a search-led architecture and landing-page overhaul approximately doubled average daily organic clicks for a niche API product in under seven weeks.',
+      socialTitle: 'Rebuilding a Niche API Website Around the Way Buyers Search',
+      socialDescription:
+        'Approximately 100% more average daily organic clicks in under seven weeks - without new blog posts or backlinks.',
+    },
+  },
 ];
 
 export function buildCaseStudyPath(slug: string): string {

@@ -1567,7 +1567,7 @@ button, input, textarea { font: inherit; color: inherit; }
 /* =========================================================
    CASE STUDY CARDS
    ========================================================= */
-.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 
 .work-card {
   display: flex;
@@ -1967,7 +1967,7 @@ button, input, textarea { font: inherit; color: inherit; }
   .hero-portrait { max-width: 400px; }
   .portrait-badge { left: 16px; bottom: 16px; }
   .band-inner { grid-template-columns: 1fr; gap: 22px; justify-items: start; }
-  .work-grid { gap: 20px; }
+  .work-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
   .faq-layout { grid-template-columns: 1fr; gap: 24px; }
   .faq-toggle-row { justify-content: center; margin: 0; }
 }

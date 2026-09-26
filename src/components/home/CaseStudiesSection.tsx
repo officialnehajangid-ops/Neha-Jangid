@@ -8,8 +8,9 @@ import { buildCaseStudyPath, CASE_STUDIES } from '@/content/case-studies';
 import { HOME_SECTION_IDS } from '@/content/site';
 import { createRevealDelayStyle, REVEAL_CLASS_NAME } from '@/lib/reveal';
 
-/** Two cards side by side on desktop, full width below 860px. */
-const CARD_IMAGE_SIZES = '(max-width: 860px) 100vw, 560px';
+/** Three cards on wide screens, two on tablets, and full width below 860px. */
+const CARD_IMAGE_SIZES =
+  '(max-width: 860px) 100vw, (max-width: 1024px) 50vw, 360px';
 const CARD_REVEAL_STAGGER = 0.08;
 
 export function CaseStudiesSection() {
@@ -21,8 +22,8 @@ export function CaseStudiesSection() {
             The work behind <span className="grad">the growth</span>
           </h2>
           <p className="sec-lede">
-            A look at how deeper audits, sharper priorities, and focused execution helped two SaaS
-            products overcome organic growth barriers.
+            A look at how deeper audits, sharper priorities, and focused execution turn organic
+            growth barriers into momentum.
           </p>
         </header>
 
