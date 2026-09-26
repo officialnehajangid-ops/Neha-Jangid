@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { CaseStudyEmailCta } from '@/components/case-studies/CaseStudyEmailCta';
 import { JsonLdScript } from '@/components/seo/JsonLdScript';
 import { MetricValue } from '@/components/ui/MetricValue';
 import { ArrowLeftIcon, ArrowRightIcon } from '@/components/ui/icons';
@@ -176,10 +177,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             </div>
 
             <div className={`cs-cta ${REVEAL_CLASS_NAME}`}>
-              <Link href={`/#${HOME_SECTION_IDS.contact}`} className="btn btn-accent btn-lg">
-                {caseStudy.contactCtaLabel}
-                <ArrowRightIcon />
-              </Link>
+              <CaseStudyEmailCta label={caseStudy.contactCtaLabel} />
             </div>
 
             <p className={`cs-note ${REVEAL_CLASS_NAME}`}>{caseStudy.confidentialityNote}</p>

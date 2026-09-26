@@ -172,7 +172,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
         'Publishing more wasn’t the answer. The growth came from understanding the product, fixing the foundations, and connecting every SEO initiative to the ICP and conversion journey.',
       ],
     },
-    contactCtaLabel: 'Discuss a similar growth challenge',
+    contactCtaLabel: 'Email me about your SEO growth challenge',
     confidentialityNote:
       'Client identity, website details, and commercially sensitive information have been withheld for confidentiality. The GSC totals shown cover the complete 16-month view; the engagement began in March 2026. Percentage-based outcomes reflect internal performance estimates.',
     metadata: {
@@ -290,7 +290,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
         'The goal wasn’t merely to publish more pages. It was to make every page contribute to discoverability, buyer trust, and business growth.',
       ],
     },
-    contactCtaLabel: 'Build a stronger organic growth system',
+    contactCtaLabel: 'Email me about your organic growth system',
     confidentialityNote:
       'Client identity, website details, and commercially sensitive information have been withheld for confidentiality. Search figures are based on the six-month Google Search Console view shown. Percentage-based commercial and AI-visibility outcomes reflect internal performance estimates.',
     metadata: {
@@ -307,9 +307,9 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     number: '03',
     card: {
       metaItems: ['Case study 03', 'Niche API product', 'Early results'],
-      title: 'Rebuilding a niche API website around the way buyers search',
+      title: 'SaaS SEO consultant case study: 98% more organic clicks',
       summary:
-        'Months of SEO had not helped its conversion pages rank. I rebuilt the site around search intent, mapped every commercial keyword to the right destination, and rewrote the landing experience.',
+        'A niche API company needed more than ongoing SEO activity. I combined a technical SEO audit, search-led site architecture, and SaaS landing-page optimization to grow qualified organic clicks.',
       headlineMetric: {
         prefix: '≈',
         value: '98%',
@@ -322,10 +322,10 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
         height: 1302,
       },
     },
-    eyebrow: 'Case study 03 · Niche API product',
+    eyebrow: 'SaaS SEO consultant case study · Niche API product',
     title: {
-      lead: 'Rebuilding a niche API website around ',
-      accent: 'the way buyers search',
+      lead: 'SaaS SEO consultant case study: ',
+      accent: '98% more organic clicks',
     },
     metaPills: ['Implementation began · September 12', 'Early results · 12-day view'],
     sections: [
@@ -333,7 +333,8 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
         heading: 'The situation',
         paragraphs: [
           'This was a highly specialized API product in a market where search volume was low, but every relevant query carried strong buying intent.',
-          'The company had already invested months in SEO. Its conversion-focused landing pages existed, yet they were not earning meaningful visibility for the core searches that mattered to the business.',
+          'The company had already invested months in SEO. Its conversion-focused SaaS landing pages existed, yet they were not earning meaningful visibility for the core searches that mattered to the business.',
+          'It needed specialized SaaS SEO support that could connect technical fixes, website structure, landing-page copy, and commercial search intent - not another disconnected list of optimizations.',
         ],
       },
       {
@@ -341,18 +342,19 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
         paragraphs: [
           'The issue went deeper than copy or metadata. The website did not give search engines a clear enough picture of what the product covered, which page should rank for each intent, or how its capabilities related to one another.',
           'Important commercial searches were either competing for the same destination or had no dedicated page at all. Strong conversion copy could not do its job if the right page was difficult to discover.',
+          'The company needed a SaaS SEO consultant who could treat technical SEO, site architecture, and copywriting as one connected growth system.',
         ],
       },
       {
         heading: 'What I audited',
         paragraphs: [
-          'I started by connecting technical findings, search behavior, and the competitive landscape. The review covered:',
+          'I started with a technical SEO audit and SaaS SEO strategy review, connecting search behavior, website structure, and the competitive landscape. The review covered:',
         ],
         bullets: [
           'The page types Google preferred for every priority query',
-          'The URL structures and hierarchies used by ranking competitors',
+          'The SEO site architecture and URL patterns used by ranking competitors',
           'Search intent and SERP composition across core commercial terms',
-          'Existing pages with overlapping or unclear keyword targets',
+          'Existing SaaS landing pages with overlapping or unclear keyword targets',
           'High-intent topics without a dedicated landing page',
           'Technical and on-page issues weakening relevance',
           'How clearly the product, capabilities, and use cases were communicated',
@@ -364,7 +366,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
         heading: 'The architecture strategy',
         paragraphs: [
           'I turned the research into a keyword-to-page map, giving every important query one clear destination within the website.',
-          'The new structure connected broad capability hubs to focused platform pages and commercial use-case pages. That created a logical path from a general need to the exact feature or application a buyer was searching for.',
+          'The new SEO site architecture connected broad capability hubs to focused platform pages and commercial use-case pages. That created a logical path from a general need to the exact feature or application a buyer was searching for.',
         ],
         bullets: [
           'Capability hubs organized the product around its core jobs',
@@ -380,14 +382,14 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
       {
         heading: 'What I changed',
         paragraphs: [
-          'With the structure in place, I rebuilt the landing-page system around it. The work included:',
+          'With the B2B SaaS SEO strategy and structure in place, I rebuilt the landing-page system around it. The work included:',
         ],
         bullets: [
           'Fixing the technical and on-page issues uncovered during the audit',
-          'Rewriting existing commercial pages around their assigned intent',
+          'Rewriting existing commercial pages around their assigned search intent',
           'Creating new landing pages for previously uncovered opportunities',
           'Separating overlapping targets to reduce keyword competition',
-          'Clarifying the messaging for each capability, platform, and use case',
+          'Applying SaaS landing-page optimization to each capability, platform, and use case',
           'Strengthening the relationships between broader and more specific pages',
         ],
         closingParagraph:
@@ -424,18 +426,18 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     takeaway: {
       heading: 'The takeaway',
       paragraphs: [
-        'For a niche product, SEO is not simply a volume game. When every relevant search matters, the website needs one clear intent, one appropriate destination, and a logical relationship between every important page.',
+        'For SaaS teams comparing SEO consultants or SaaS SEO services, the important question is not who can publish the most. It is who can connect technical SEO, site architecture, landing-page copy, and search intent into one growth system.',
         'Architecture determines whether strong copy can be discovered. Clear page purpose also gives search engines and AI answer systems a better foundation for understanding, retrieving, and citing the product.',
       ],
     },
-    contactCtaLabel: 'Plan a search-led site architecture',
+    contactCtaLabel: 'Email me about your SaaS SEO project',
     confidentialityNote:
       'Client identity, website details, and commercially sensitive information have been withheld for confidentiality. The approximate 98% lift is calculated from the displayed Search Console totals of 920 and 1.82K clicks. The approximate 114% daily lift accounts for the 13-day baseline and 12-day later period. Work began on September 12 and implementation continued throughout the comparison window, so these figures represent early directional results. No new blog posts or backlinks were added during this period.',
     metadata: {
-      title: 'Case Study 03 - Rebuilding a Niche API Site Architecture | Neha Jangid',
+      title: 'SaaS SEO Consultant Case Study: 98% Click Growth | Neha Jangid',
       description:
-        'How a search-led architecture and landing-page overhaul increased total organic clicks by approximately 98% for a niche API product during an early implementation window.',
-      socialTitle: 'Rebuilding a Niche API Website Around the Way Buyers Search',
+        'See how a SaaS SEO consultant used a technical SEO audit, search-led site architecture, and SaaS landing-page optimization to increase organic clicks by 98%.',
+      socialTitle: 'SaaS SEO Consultant Case Study: 98% More Organic Clicks',
       socialDescription:
         'Approximately 98% more total organic clicks during an early implementation window - without new blog posts or backlinks.',
     },
