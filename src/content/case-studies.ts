@@ -306,14 +306,14 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     slug: 'rebuilding-niche-api-site-architecture',
     number: '03',
     card: {
-      metaItems: ['Case study 03', 'Niche API product', 'Under 7 weeks'],
+      metaItems: ['Case study 03', 'Niche API product', 'Early results'],
       title: 'Rebuilding a niche API website around the way buyers search',
       summary:
         'Months of SEO had not helped its conversion pages rank. I rebuilt the site around search intent, mapped every commercial keyword to the right destination, and rewrote the landing experience.',
       headlineMetric: {
         prefix: '≈',
-        value: '100%',
-        label: 'increase in average daily organic clicks',
+        value: '98%',
+        label: 'increase in total organic clicks',
       },
       image: {
         src: '/images/case-study-03-gsc.png',
@@ -327,7 +327,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
       lead: 'Rebuilding a niche API website around ',
       accent: 'the way buyers search',
     },
-    metaPills: ['Initial result window · under 7 weeks', 'No new backlinks or blog posts'],
+    metaPills: ['Implementation began · September 12', 'Early results · 12-day view'],
     sections: [
       {
         heading: 'The situation',
@@ -396,28 +396,30 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
       {
         heading: 'The outcome',
         paragraphs: [
-          'The work began on August 10. By September 26 - in under seven weeks - average daily organic clicks in the final two weeks shown were approximately double the two-week baseline immediately before the restructure.',
-          'The complete three-month Search Console view recorded 6.68K clicks, 272K impressions, a 2.5% average click-through rate, and an average position of 10.9.',
-          'No new blog posts or backlinks were added during this result window. The lift coincided with the architecture and landing-page rollout: clearer search intent, better page coverage, and messaging built for each destination.',
+          'I began the restructuring, landing-page copywriting, and page design on September 12. The work still had to be researched, created, and rolled out during the comparison period, so this data reflects early implementation momentum rather than a finished end state.',
+          'Even at this early stage, Google Search Console recorded 1.82K clicks from September 12 to 23, compared with 920 clicks from August 30 to September 11. That is an approximate 98% increase in total organic clicks.',
+          'The later period was also one day shorter. On a daily basis, clicks rose from approximately 71 to 152 per day - an increase of roughly 114%.',
+          'Search performance became more efficient too. CTR increased from 2.2% to 5.6%, while average position improved from 10.7 to 9.2. The website earned substantially more clicks despite impressions moving from 42.1K to 32.5K.',
+          'No new blog posts or backlinks were added during this early result window. The lift appeared while the new architecture, landing-page copy, and design were being implemented.',
           'The clearer structure also created a stronger foundation for AEO and GEO by making the product’s capabilities and page relationships easier for search and AI systems to interpret. These pages were still early in their lifecycle, with more room to mature.',
         ],
       },
     ],
     impactMetrics: [
-      { prefix: '≈', value: '100%', label: 'increase in average daily organic clicks' },
-      { value: '6.68K', label: 'clicks in the three-month GSC view' },
-      { value: '272K', label: 'impressions in the three-month GSC view' },
-      { value: '2.5%', label: 'average CTR across the view' },
+      { prefix: '≈', value: '98%', label: 'increase in total organic clicks' },
+      { prefix: '≈', value: '114%', label: 'increase in average daily clicks' },
+      { value: '5.6%', label: 'CTR, up from 2.2%' },
+      { value: '9.2', label: 'average position, improved from 10.7' },
     ],
     searchConsole: {
       image: {
-        src: '/images/case-study-03-gsc.png',
-        alt: 'Google Search Console performance showing organic clicks rising after the August 10 architecture rollout, with 6.68K clicks, 272K impressions, 2.5% CTR, and an average position of 10.9 across the full three-month view.',
-        width: 2184,
-        height: 1302,
+        src: '/images/case-study-03-gsc-comparison.png',
+        alt: 'Google Search Console comparison showing clicks increasing from 920 between August 30 and September 11 to 1.82K between September 12 and 23.',
+        width: 2172,
+        height: 1260,
       },
       caption:
-        '6.68K clicks · 272K impressions · 2.5% average CTR · 10.9 average position',
+        '920 → 1.82K clicks · August 30–September 11 vs September 12–23 · ≈98% increase',
     },
     takeaway: {
       heading: 'The takeaway',
@@ -428,14 +430,14 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     },
     contactCtaLabel: 'Plan a search-led site architecture',
     confidentialityNote:
-      'Client identity, website details, and commercially sensitive information have been withheld for confidentiality. The Search Console totals cover the complete three-month view and include both pre- and post-rollout data. The approximate 100% lift compares average daily clicks in the final 14 days shown with the 14 days immediately before work began on August 10; it is estimated from the chart. No new blog posts or backlinks were added during the result window.',
+      'Client identity, website details, and commercially sensitive information have been withheld for confidentiality. The approximate 98% lift is calculated from the displayed Search Console totals of 920 and 1.82K clicks. The approximate 114% daily lift accounts for the 13-day baseline and 12-day later period. Work began on September 12 and implementation continued throughout the comparison window, so these figures represent early directional results. No new blog posts or backlinks were added during this period.',
     metadata: {
       title: 'Case Study 03 - Rebuilding a Niche API Site Architecture | Neha Jangid',
       description:
-        'How a search-led architecture and landing-page overhaul approximately doubled average daily organic clicks for a niche API product in under seven weeks.',
+        'How a search-led architecture and landing-page overhaul increased total organic clicks by approximately 98% for a niche API product during an early implementation window.',
       socialTitle: 'Rebuilding a Niche API Website Around the Way Buyers Search',
       socialDescription:
-        'Approximately 100% more average daily organic clicks in under seven weeks - without new blog posts or backlinks.',
+        'Approximately 98% more total organic clicks during an early implementation window - without new blog posts or backlinks.',
     },
   },
 ];
