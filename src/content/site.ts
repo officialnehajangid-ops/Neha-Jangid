@@ -11,9 +11,9 @@ export const SITE_URL = (
 export const SITE = {
   name: 'Neha Jangid',
   jobTitle: 'SaaS SEO & Organic Growth Consultant',
-  title: 'Neha Jangid | SaaS SEO & Organic Growth',
+  title: 'SaaS SEO Consultant for Organic Growth | Neha Jangid',
   description:
-    'I help SaaS companies increase visibility, traffic, and signups. 5+ years of SEO and content experience across 30+ SaaS products. Co-founder of DevMarkLab.',
+    'SaaS SEO consultant helping software companies grow qualified traffic and signups through technical SEO, content strategy, AI search, and digital PR.',
   socialDescription:
     'Organic growth for SaaS - search, AI visibility, content, video, digital PR and communities, tied to signups and revenue.',
   locale: 'en_US',
